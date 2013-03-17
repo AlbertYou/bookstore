@@ -1,0 +1,111 @@
+@CHARSET "UTF-8";
+#page {
+	position: relative;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 900px;
+}
+#header {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 900px;
+}
+#content {
+	float: left;
+	margin: 0px auto 30px auto;
+	padding: 0px;
+	width: 900px;
+}
+#footer {
+	float: left;
+	width: 900px;
+	margin: 0px;
+	padding: 0px;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+#shoppingcart_business_dd {
+	float: left;
+	margin: 20px auto 0px auto;
+	padding: 0px;
+	padding-left: 10px;
+	width: 890px;
+	height: 40px;
+	color: green;
+	border-bottom: 2px solid #DFC9B2;
+}
+#book_info {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 30px 0 30px 0;
+	width: 400px;
+}
+#book_info ul {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 400px;
+	list-style: none;
+}
+#book_image {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px 0 10px 70px;
+	width: 330px;
+	display: block;
+}
+#book_name {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 10px 0 10px 70px;
+	width: 330px;
+	display: block;
+	font-size: 18px;
+}
+#comment_form {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 20px 0 30px 20px;
+	width: 480px;
+}
+#comment_title {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 480px;
+	color: orange;
+	font-weight: bold;
+}
+#comment_form ul {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 10px 0 0 0;
+	width: 480px;
+	list-style: none;
+}
+.form_item_name{
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 15px 0 0 0;
+	width: 480px;
+	display: block;
+}
+.form_item_value {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 10px 0 0 30px;
+	width: 480px;
+	display: block;
+}
+#form_submit {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 30px 0 0 120px;
+	width: 510px;
+	display: block;
+}

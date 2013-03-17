@@ -1,0 +1,141 @@
+@CHARSET "UTF-8";
+#page {
+	position: relative;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 900px;
+}
+#header {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 900px;
+}
+#content {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 20px 0 20px 0;
+	width: 900px;
+}
+#left {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 200px;
+}
+#right {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 700px;
+}
+#footer {
+	float:left;
+	width:900px;
+	height:100px;
+	margin:0px;
+	padding:0px;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+#nav_panel {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 200px;
+}
+.current_nav {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 7px 0 5px 20px;
+	width: 180px;
+	background-color: #aacbf3;
+	border-bottom: 1px solid #5390cf;
+}
+.nav_item1 {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 7px 0 5px 20px;
+	width: 180px;
+	background-color: #cee4fa;
+	border-bottom: 1px solid #5390cf;
+}
+.nav_item2 {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 7px 0 5px 40px;
+	padding-left:40px;
+	width: 160px;
+	background-color: #ebf4fd;
+	border-bottom: 1px solid #c9daeb;
+}
+.nav_item1, .nav_item1 a, .nav_item2 a{
+	color: #6392fb;
+}
+.current_nav a{
+	color: #058cf4;
+	font-weight: bold;
+}
+#temp_nav {
+	float: left;
+	margin: 0px auto 0px 10px;
+	padding: 10px 0px 5px 10px;
+	width: 680px;
+	color: orange;
+	font-weight: bold;
+	font-size: 18px;
+	font-weight: bold;
+	background-color: #eceefb;
+}
+#purchaseddbooks {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 700px;
+}
+#booklist {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 5px 30px 20px 30px;
+	width: 640px;
+	list-style: none;
+	display: block;
+}
+.book_item {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	padding-left: 20px;
+	width: 140px;
+	height: 200px;
+	display: block;
+}
+.book_image {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 10px 20px 3px 0px;
+	width: 90px;
+	height: 150px;
+	display: block;
+}
+.book_name {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 120px;
+	display: block;
+}
+
+#paginating {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 10px 10px 0px 0;
+	text-align: right;
+	width: 690px;
+	height: 40px;
+	border-top: 1px solid #c2c4c3;
+}

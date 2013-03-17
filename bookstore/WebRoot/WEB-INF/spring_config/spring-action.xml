@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+       
+       <bean id="adminInterceptor" class="com.albert.bs.interceptor.AdminInterceptor" />
+       <bean id="userInterceptor" class="com.albert.bs.interceptor.UserInterceptor" />
+       <bean id="lastUrlInterceptor" class="com.albert.bs.interceptor.LastUrlInterceptor" />
+       <bean id="lastUrlParamInterceptor" class="com.albert.bs.interceptor.LastUrlParamInterceptor" />
+       <bean id="cookieInterceptor" class="com.albert.bs.interceptor.CookieInterceptor">
+       		<property name="userService" ref="userService"></property>
+       </bean>
+       <bean id="validationCodeResult" class="com.albert.bs.result.ValidationCodeResult" />
+       
+       <bean id="albertAction" class="com.albert.bs.action.AlbertAction" abstract="true" scope="prototype" />
+       <bean id="userAction" class="com.albert.bs.user.action.UserAction" scope="prototype" parent="albertAction" />
+       <bean id="adminAction" class="com.albert.bs.admin.action.AdminAction" scope="prototype" parent="albertAction" />
+       
+       <!-- 管理员 -->
+       <bean id="adminLoginAction" class="com.albert.bs.admin.action.admin.AdminLoginAction" parent="adminAction" scope="prototype">
+       		<property name="adminService" ref="adminService"></property>
+       </bean>
+       <bean id="adminLogoutAction" class="com.albert.bs.admin.action.admin.AdminLogoutAction" parent="adminAction" scope="prototype"/>
+       <bean id="addAdminAction" class="com.albert.bs.admin.action.admin.AddAdminAction" parent="adminAction" scope="prototype">
+       		<property name="adminService" ref="adminService"></property>
+       </bean>
+       <bean id="deleteAdminAction" class="com.albert.bs.admin.action.admin.DeleteAdminAction" parent="adminAction" scope="prototype">
+       		<property name="adminService" ref="adminService"></property>
+       </bean>
+       <bean id="adminListAction" class="com.albert.bs.admin.action.admin.AdminListAction" parent="adminAction" scope="prototype">
+       		<property name="adminService" ref="adminService"></property>
+       </bean>
+       <bean id="resetPasswordAction" class="com.albert.bs.admin.action.admin.ResetPasswordAction" parent="adminAction" scope="prototype">
+       		<property name="adminService" ref="adminService"></property>
+       </bean>
+       <bean id="modifyPswAction" class="com.albert.bs.admin.action.admin.ModifyPasswordAction" parent="adminAction" scope="prototype">
+       		<property name="adminService" ref="adminService"></property>
+       </bean>
+       <bean id="adminIndexAction" class="com.albert.bs.admin.action.book.IndexAction" parent="adminAction" scope="prototype">
+       		<property name="orderItemService" ref="orderItemService"></property>
+       		<property name="orderService" ref="orderService"></property>
+       		<property name="commentService" ref="commentService"></property>
+       </bean>
+       
+       
+       <bean id="adminCategoryListAction" class="com.albert.bs.admin.action.category.CategoryListAction" parent="adminAction" scope="prototype">
+       		<property name="categoryService" ref="topCategoryService"></property>
+       </bean>
+       <bean id="hasTopCategoryAction" class="com.albert.bs.admin.action.category.HasTopCategoryAction" parent="adminAction" scope="prototype">
+       		<property name="categoryService" ref="topCategoryService"></property>
+       </bean>
+       <bean id="addTopCategoryAction" class="com.albert.bs.admin.action.category.AddTopCategoryAction" parent="adminAction" scope="prototype">
+       		<property name="categoryService" ref="topCategoryService"></property>
+       </bean>
+       <bean id="addLowCategoryAction" class="com.albert.bs.admin.action.category.AddLowCategoryAction" parent="adminAction" scope="prototype">
+       		<property name="categoryService" ref="lowCategoryService"></property>
+       </bean>
+       <bean id="modifyTopCategoryAction" class="com.albert.bs.admin.action.category.ModifyTopCategoryAction" parent="adminAction" scope="prototype">
+       		<property name="categoryService" ref="topCategoryService"></property>
+       </bean>
+       <bean id="modifyLowCategoryAction" class="com.albert.bs.admin.action.category.ModifyLowCategoryAction" parent="adminAction" scope="prototype">
+       		<property name="categoryService" ref="lowCategoryService"></property>
+       </bean>
+       <bean id="deleteLowCategoryAction" class="com.albert.bs.admin.action.category.DeleteLowCategoryAction" parent="adminAction" scope="prototype">
+       		<property name="categoryService" ref="lowCategoryService"></property>
+       </bean>
+       <bean id="deleteTopCategoryAction" class="com.albert.bs.admin.action.category.DeleteTopCategoryAction" parent="adminAction" scope="prototype">
+       		<property name="categoryService" ref="topCategoryService"></property>
+       </bean>
+
+
+       <bean id="publisherListAction" class="com.albert.bs.admin.action.publisher.PublisherListAction" parent="adminAction" scope="prototype">
+       		<property name="publisherService" ref="publisherService"></property>
+       </bean>
+       <bean id="hasPublisherAction" class="com.albert.bs.admin.action.publisher.HasPublisherAction" parent="adminAction" scope="prototype">
+       		<property name="publisherService" ref="publisherService"></property>
+       </bean>
+       <bean id="addPublisherAction" class="com.albert.bs.admin.action.publisher.AddPublisherAction" parent="adminAction" scope="prototype">
+       		<property name="publisherService" ref="publisherService"></property>
+       </bean>
+       <bean id="modifyPublisherAction" class="com.albert.bs.admin.action.publisher.ModifyPublisherAction" parent="adminAction" scope="prototype">
+       		<property name="publisherService" ref="publisherService"></property>
+       </bean>
+       <bean id="deletePublisherAction" class="com.albert.bs.admin.action.publisher.DeletePublisherAction" parent="adminAction" scope="prototype">
+       		<property name="publisherService" ref="publisherService"></property>
+       </bean>
+
+
+       <bean id="toAddBookAction" class="com.albert.bs.admin.action.book.ToAddBookAction" parent="adminAction" scope="prototype">
+       		<property name="topCategoryService" ref="topCategoryService"></property>
+       		<property name="publisherService" ref="publisherService"></property>
+       </bean>
+       <bean id="addBookAction" class="com.albert.bs.admin.action.book.AddBookAction" parent="adminAction" scope="prototype">
+       		<property name="bookService" ref="bookService"></property>
+       </bean>
+       <bean id="searchBookAction" class="com.albert.bs.admin.action.book.SearchBookAction" parent="adminAction" scope="prototype">
+       		<property name="bookService" ref="bookService"></property>
+       </bean>
+       <bean id="setSafeStockAction" class="com.albert.bs.admin.action.book.SetSafeStockAction" parent="adminAction" scope="prototype">
+       </bean>
+       <bean id="lowStockBookListAction" class="com.albert.bs.admin.action.book.LowStockBookListAction" parent="adminAction" scope="prototype">
+       		<property name="bookService" ref="bookService"></property>
+       </bean>
+       <bean id="bookInfoAction" class="com.albert.bs.admin.action.book.BookInfoAction" parent="adminAction" scope="prototype">
+       		<property name="bookService" ref="bookService"></property>
+       		<property name="commentService" ref="commentService"></property>
+       		<property name="collectService" ref="collectService"></property>
+       		<property name="orderItemService" ref="orderItemService"></property>
+       		<property name="topCategoryService" ref="topCategoryService"></property>
+       		<property name="publisherService" ref="publisherService"></property>
+       </bean>
+       <bean id="modifyStockAction" class="com.albert.bs.admin.action.book.ModifyStockAction" parent="adminAction" scope="prototype">
+       		<property name="bookService" ref="bookService"></property>
+       </bean>
+       <bean id="downShelfAction" class="com.albert.bs.admin.action.book.DownShelfAction" parent="adminAction" scope="prototype">
+       		<property name="bookService" ref="bookService"></property>
+       </bean>
+       <bean id="modifyImageAction" class="com.albert.bs.admin.action.book.ModifyImageAction" parent="adminAction" scope="prototype">
+       		<property name="bookService" ref="bookService"></property>
+       </bean>
+       <bean id="modifyBookAction" class="com.albert.bs.admin.action.book.ModifyBookAction" parent="adminAction" scope="prototype">
+       		<property name="bookService" ref="bookService"></property>
+       </bean>
+       
+       
+       <bean id="addBillboardAction" class="com.albert.bs.admin.action.billboard.AddBillboardAction" parent="adminAction" scope="prototype">
+       		<property name="billboardService" ref="billboardService"></property>
+       </bean>
+       <bean id="currentBillboardsAction" class="com.albert.bs.admin.action.billboard.CurrentBillboardsAction" parent="adminAction" scope="prototype">
+       		<property name="billboardService" ref="billboardService"></property>
+       </bean>
+       <bean id="hidBillboardAction" class="com.albert.bs.admin.action.billboard.HidBillboardAction" parent="adminAction" scope="prototype">
+       		<property name="billboardService" ref="billboardService"></property>
+       </bean>
+       <bean id="billboardListAction" class="com.albert.bs.admin.action.billboard.BillboardListAction" parent="adminAction" scope="prototype">
+       		<property name="billboardService" ref="billboardService"></property>
+       </bean>
+       <bean id="deleteBillboardAction" class="com.albert.bs.admin.action.billboard.DeleteBillboardAction" parent="adminAction" scope="prototype">
+       		<property name="billboardService" ref="billboardService"></property>
+       </bean>
+       <bean id="billboardInfoAction" class="com.albert.bs.admin.action.billboard.BillboardInfoAction" parent="adminAction" scope="prototype">
+       		<property name="billboardService" ref="billboardService"></property>
+       </bean>
+       
+       
+       <bean id="searchUserAction" class="com.albert.bs.admin.action.user.SearchUserAction" parent="adminAction" scope="prototype">
+       		<property name="userService" ref="userService"></property>
+       </bean>
+       <bean id="changeUserStatusAction" class="com.albert.bs.admin.action.user.ChangeUserStatusAction" parent="adminAction" scope="prototype">
+       		<property name="userService" ref="userService"></property>
+       </bean>
+       <bean id="userInfoAction" class="com.albert.bs.admin.action.user.UserInfoAction" parent="adminAction" scope="prototype">
+       		<property name="userService" ref="userService"></property>
+       </bean>
+       
+       
+       <bean id="ordersNewAction" class="com.albert.bs.admin.action.order.OrdersNewAction" parent="adminAction" scope="prototype">
+       		<property name="orderService" ref="orderService"></property>
+       </bean>
+       <bean id="queryOrderAction" class="com.albert.bs.admin.action.order.QueryOrderAction" parent="adminAction" scope="prototype">
+       		<property name="orderService" ref="orderService"></property>
+       </bean>
+       <bean id="deliveredOrdersListAction" class="com.albert.bs.admin.action.order.DeliveredOrdersListAction" parent="adminAction" scope="prototype">
+       		<property name="orderService" ref="orderService"></property>
+       </bean>
+       <bean id="ordersListAction" class="com.albert.bs.admin.action.order.OrdersListAction" parent="adminAction" scope="prototype">
+       		<property name="orderService" ref="orderService"></property>
+       </bean>
+       <bean id="deliverAction" class="com.albert.bs.admin.action.order.DeliverAction" parent="adminAction" scope="prototype">
+       		<property name="orderService" ref="orderService"></property>
+       </bean>
+
+
+       <bean id="todayCommentsAction" class="com.albert.bs.admin.action.comment.TodayCommentsAction" parent="adminAction" scope="prototype">
+       		<property name="commentService" ref="commentService"></property>
+       </bean>
+       <bean id="lowScoreCommentsAction" class="com.albert.bs.admin.action.comment.LowScoreCommentsAction" parent="adminAction" scope="prototype">
+       		<property name="commentService" ref="commentService"></property>
+       </bean>
+       <bean id="queryCommentsAction" class="com.albert.bs.admin.action.comment.QueryCommentsAction" parent="adminAction" scope="prototype">
+       		<property name="commentService" ref="commentService"></property>
+       </bean>
+       
+       
+       
+       <!-- 用户 -->
+       <bean id="userIndexAction" class="com.albert.bs.user.action.IndexAction" parent="userAction" scope="prototype">
+       		<property name="bookService" ref="bookService"></property>
+       		<property name="categoryService" ref="topCategoryService"></property>
+       		<property name="billboardService" ref="billboardService"></property>
+       </bean>
+       <bean id="toLoginAction" class="com.albert.bs.user.action.user.ToLoginAction" parent="userAction" scope="prototype">
+       		<property name="userService" ref="userService"></property>
+       </bean>
+       <bean id="existUsernameOrEmailAction" class="com.albert.bs.user.action.user.ExistUsernameOrEmailAction" parent="userAction" scope="prototype">
+       		<property name="userService" ref="userService"></property>
+       </bean>
+       <bean id="existUsernameAction" class="com.albert.bs.user.action.user.ExistUsernameAction" parent="userAction" scope="prototype">
+       		<property name="userService" ref="userService"></property>
+       </bean>
+       <bean id="existEmailAction" class="com.albert.bs.user.action.user.ExistEmailAction" parent="userAction" scope="prototype">
+       		<property name="userService" ref="userService"></property>
+       </bean>
+       <bean id="loginAction" class="com.albert.bs.user.action.user.LoginAction" parent="userAction" scope="prototype">
+       		<property name="userService" ref="userService"></property>
+       		<property name="productService" ref="productService"></property>
+       </bean>
+       <bean id="registerAction" class="com.albert.bs.user.action.user.RegisterAction" parent="userAction" scope="prototype">
+       		<property name="userService" ref="userService"></property>
+       </bean>
+       <bean id="logoutAction" class="com.albert.bs.user.action.user.LogoutAction" parent="userAction" scope="prototype">
+       </bean>
+       <bean id="findPasswordAction" class="com.albert.bs.user.action.user.FindPasswordAction" parent="userAction" scope="prototype">
+       		<property name="userService" ref="userService"></property>
+       		<property name="mailSender" ref="mailSender"></property>
+       		<property name="message" ref="mailMessage"></property>
+       </bean>
+       <bean id="toModifyPasswordAction" class="com.albert.bs.user.action.user.ToModifyPswAction" parent="userAction" scope="prototype">
+       		<property name="orderItemService" ref="orderItemService"></property>
+       		<property name="orderService" ref="orderService"></property>
+       </bean>
+       <bean id="modifyPasswordAction" class="com.albert.bs.user.action.user.ModifyPasswordAction" parent="userAction" scope="prototype">
+       		<property name="userService" ref="userService"></property>
+       </bean>
+       <bean id="toEditUserAction" class="com.albert.bs.user.action.user.ToEditUserAction" parent="userAction" scope="prototype">
+       		<property name="orderItemService" ref="orderItemService"></property>
+       		<property name="orderService" ref="orderService"></property>
+       </bean>
+       <bean id="editUserAction" class="com.albert.bs.user.action.user.EditUserAction" parent="userAction" scope="prototype">
+       		<property name="userService" ref="userService"></property>
+       </bean>
+
+       <bean id="billboardAction" class="com.albert.bs.user.action.billboard.BillboardAction" parent="userAction" scope="prototype">
+       		<property name="billboardService" ref="billboardService"></property>
+       </bean>
+
+       <bean id="bookAction" class="com.albert.bs.user.action.book.BookAction" parent="userAction" scope="prototype">
+       		<property name="bookService" ref="bookService"></property>
+       		<property name="commentService" ref="commentService"></property>
+       		<property name="collectService" ref="collectService"></property>
+       		<property name="orderItemService" ref="orderItemService"></property>
+       </bean>
+       <bean id="commentsOfBookAction" class="com.albert.bs.user.action.book.CommentsOfBookAction" parent="userAction" scope="prototype">
+       		<property name="bookService" ref="bookService"></property>
+       		<property name="commentService" ref="commentService"></property>
+       </bean>
+       <bean id="findBookAction" class="com.albert.bs.user.action.book.FindBookAction" parent="userAction" scope="prototype">
+       		<property name="bookService" ref="bookService"></property>
+       		<property name="commentService" ref="commentService"></property>
+       		<property name="categoryService" ref="topCategoryService"></property>
+       </bean>
+       <bean id="categoryBooksAction" class="com.albert.bs.user.action.book.CategoryBooksAction" parent="userAction" scope="prototype">
+       		<property name="bookService" ref="bookService"></property>
+       		<property name="commentService" ref="commentService"></property>
+       		<property name="topCategoryService" ref="topCategoryService"></property>
+       		<property name="lowCategoryService" ref="lowCategoryService"></property>
+       </bean>
+   
+       <bean id="newBookListAction" class="com.albert.bs.user.action.book.NewBookListAction" parent="userAction" scope="prototype">
+       		<property name="bookService" ref="bookService"></property>
+       </bean>
+       <bean id="goodBookListAction" class="com.albert.bs.user.action.book.GoodBookListAction" parent="userAction" scope="prototype">
+       		<property name="bookService" ref="bookService"></property>
+       </bean>
+       <bean id="bestSaleBookListAction" class="com.albert.bs.user.action.book.BestSaleBookListAction" parent="userAction" scope="prototype">
+       		<property name="bookService" ref="bookService"></property>
+       </bean>
+       <bean id="bestSellBookListAction" class="com.albert.bs.user.action.book.BestSellBookListAction" parent="userAction" scope="prototype">
+       		<property name="bookService" ref="bookService"></property>
+       </bean>
+       
+       <bean id="homePageAction" class="com.albert.bs.user.action.user.HomePageAction" parent="userAction" scope="prototype">
+       		<property name="bookService" ref="bookService"></property>
+       		<property name="orderItemService" ref="orderItemService"></property>
+       		<property name="orderService" ref="orderService"></property>
+       </bean>
+       <bean id="purchasedBooksAction" class="com.albert.bs.user.action.book.PurchasedBooksAction" parent="userAction" scope="prototype">
+       		<property name="bookService" ref="bookService"></property>
+       </bean>
+       
+        <bean id="deliveredOrderListAction" class="com.albert.bs.user.action.order.DeliveredOrdersListAction" parent="userAction" scope="prototype">
+       		<property name="orderService" ref="orderService"></property>
+       </bean>
+        <bean id="receiveBookAction" class="com.albert.bs.user.action.order.ReceiveBookAction" parent="userAction" scope="prototype">
+       		<property name="orderService" ref="orderService"></property>
+       </bean>
+
+        <bean id="noCommentAction" class="com.albert.bs.user.action.comment.NoCommentAction" parent="userAction" scope="prototype">
+       		<property name="orderItemService" ref="orderItemService"></property>
+       </bean>
+        <bean id="allCommentsAction" class="com.albert.bs.user.action.comment.AllCommentsAction" parent="userAction" scope="prototype">
+       		<property name="commentService" ref="commentService"></property>
+       </bean>
+        <bean id="toAddCommentAction" class="com.albert.bs.user.action.comment.ToAddCommentAction" parent="userAction" scope="prototype">
+       		<property name="orderItemService" ref="orderItemService"></property>
+       </bean>
+       <bean id="addCommentAction" class="com.albert.bs.user.action.comment.AddCommentAction" parent="userAction" scope="prototype">
+       		<property name="commentService" ref="commentService"></property>
+       		<property name="orderItemService" ref="orderItemService"></property>
+       </bean>
+       
+        <bean id="unDeliveredOrdersListAction" class="com.albert.bs.user.action.order.UnDeliveredOrdersListAction" parent="userAction" scope="prototype">
+       		<property name="orderService" ref="orderService"></property>
+       </bean>
+        <bean id="finishedOrdersListAction" class="com.albert.bs.user.action.order.FinishedOrdersListAction" parent="userAction" scope="prototype">
+       		<property name="orderService" ref="orderService"></property>
+       </bean>
+       
+       
+       
+       <bean id="addCartAction" class="com.albert.bs.user.action.cart.AddCartAction" parent="userAction" scope="prototype">
+       		<property name="productService" ref="productService"></property>
+       </bean>
+       <bean id="changeQuantityAction" class="com.albert.bs.user.action.product.ChangeQuantityAction" parent="userAction" scope="prototype">
+       		<property name="productService" ref="productService"></property>
+       </bean>
+       <bean id="deleteCartAction" class="com.albert.bs.user.action.cart.DeleteCartAction" parent="userAction" scope="prototype">
+       		<property name="productService" ref="productService"></property>
+       </bean>
+       <bean id="clearCartAction" class="com.albert.bs.user.action.cart.ClearCartAction" parent="userAction" scope="prototype">
+       		<property name="productService" ref="productService"></property>
+       </bean>
+
+       <bean id="addCollectAction" class="com.albert.bs.user.action.collect.AddCollectAction" parent="userAction" scope="prototype">
+       		<property name="collectService" ref="collectService"></property>
+       </bean>
+       <bean id="collectListAction" class="com.albert.bs.user.action.collect.CollectListAction" parent="userAction" scope="prototype">
+       		<property name="collectService" ref="collectService"></property>
+       </bean>
+       <bean id="clearCollectAction" class="com.albert.bs.user.action.collect.ClearCollectAction" parent="userAction" scope="prototype">
+       		<property name="collectService" ref="collectService"></property>
+       </bean>
+       <bean id="deleteCollectAction" class="com.albert.bs.user.action.collect.DeleteCollectAction" parent="userAction" scope="prototype">
+       		<property name="collectService" ref="collectService"></property>
+       </bean>
+       <bean id="modifyCollectTitleAction" class="com.albert.bs.user.action.collect.ModifyCollectTitleAction" parent="userAction" scope="prototype">
+       		<property name="collectService" ref="collectService"></property>
+       </bean>
+       <bean id="moveToCollectAction" class="com.albert.bs.user.action.collect.MoveToCollectAction" parent="userAction" scope="prototype">
+       		<property name="productService" ref="productService"></property>
+       		<property name="collectService" ref="collectService"></property>
+       </bean>
+       
+       <bean id="recipientListAction" class="com.albert.bs.user.action.recipient.RecipientListAction" parent="userAction" scope="prototype">
+       		<property name="recipientService" ref="recipientService"></property>
+       </bean>
+       <bean id="addRecipientAction" class="com.albert.bs.user.action.recipient.AddRecipientAction" parent="userAction" scope="prototype">
+       		<property name="recipientService" ref="recipientService"></property>
+       </bean>
+       <bean id="deleteRecipientAction" class="com.albert.bs.user.action.recipient.DeleteRecipientAction" parent="userAction" scope="prototype">
+       		<property name="recipientService" ref="recipientService"></property>
+       </bean>
+       <bean id="recipientAction" class="com.albert.bs.user.action.recipient.RecipientAction" parent="userAction" scope="prototype">
+       		<property name="recipientService" ref="recipientService"></property>
+       </bean>
+       <bean id="modifyRecipientAction" class="com.albert.bs.user.action.recipient.ModifyRecipientAction" parent="userAction" scope="prototype">
+       		<property name="recipientService" ref="recipientService"></property>
+       </bean>
+       <bean id="defaultRecipientAction" class="com.albert.bs.user.action.recipient.DefaultRecipientAction" parent="userAction" scope="prototype">
+       		<property name="recipientService" ref="recipientService"></property>
+       </bean>
+       
+       
+       <bean id="confirmOrderAction" class="com.albert.bs.user.action.order.ConfirmOrderAction" parent="userAction" scope="prototype">
+       		<property name="recipientService" ref="recipientService"></property>
+       </bean>
+       <bean id="finishOrderAction" class="com.albert.bs.user.action.order.FinishOrderAction" parent="userAction" scope="prototype">
+       		<property name="orderService" ref="orderService"></property>
+       		<property name="productService" ref="productService"></property>
+       		<property name="bookService" ref="bookService"></property>
+       </bean>
+       
+       <bean id="buyBookAction" class="com.albert.bs.user.action.book.BuyBookAction" parent="userAction" scope="prototype">
+       		<property name="bookService" ref="bookService"></property>
+       		<property name="recipientService" ref="recipientService"></property>
+       </bean>
+       <bean id="finishOrderNowAction" class="com.albert.bs.user.action.order.FinishOrderNowAction" parent="userAction" scope="prototype">
+       		<property name="orderService" ref="orderService"></property>
+       		<property name="bookService" ref="bookService"></property>
+       </bean>
+       <bean id="defaultRecipientNowAction" class="com.albert.bs.user.action.recipient.DefaultRecipientNowAction" parent="userAction" scope="prototype">
+       		<property name="recipientService" ref="recipientService"></property>
+       		<property name="bookService" ref="bookService"></property>
+       </bean>
+       <bean id="addRecipientNowAction" class="com.albert.bs.user.action.recipient.AddRecipientNowAction" parent="userAction" scope="prototype">
+       		<property name="recipientService" ref="recipientService"></property>
+       		<property name="bookService" ref="bookService"></property>
+       </bean>
+       
+       
+       
+       
+</beans>

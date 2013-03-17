@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >          
+<hibernate-mapping>
+	<class name="com.albert.bs.model.OrderItem" catalog="bookstore" table="orderitem" dynamic-insert="true" dynamic-update="true">
+		<id name="itemId" type="string" column="itemid">
+			<generator class="uuid.hex"></generator>
+		</id>
+		<many-to-one name="order" column="orderid" lazy="false"></many-to-one>
+		<many-to-one name="book" column="bookid"></many-to-one>
+		<property name="discount" column="discount" type="integer"></property>
+		<property name="price" column="price" type="double" scale="8" precision="2"></property>
+		<property name="quantity" column="quantity" type="integer"></property>
+		<property name="isCommented" column="iscommented" type="integer"></property>
+	</class>
+</hibernate-mapping>

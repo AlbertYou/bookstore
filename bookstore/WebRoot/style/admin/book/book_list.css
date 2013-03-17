@@ -1,0 +1,166 @@
+@CHARSET "UTF-8";
+#page {
+	position:relative;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:900px;
+}
+#header {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:900px;
+}
+#content {
+	float:center;
+	margin:0px auto 0px auto;
+	padding: 0px;
+	width:900px;
+}
+#left {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:200px;
+}
+#right {
+	float:left;
+	margin: 20px auto 40px auto;
+	padding:0px;
+	width: 700px;
+}
+#footer {
+	float:left;
+	width:900px;
+	margin:0px;
+	padding:0px;
+}
+#left_nav {
+	float:left;
+	margin: 30px auto 100px auto;
+	padding: 20px 0 0 20px;
+	width:180px;
+	list-style: none;
+}
+#left_nav li {
+	float:left;
+	margin:0px 20px 0px auto;
+	padding: 5px 0 0 10px;
+	width: 140px;
+	display: block;
+	font-weight: bold;
+	font-size: 19px;
+	border-bottom: 1px solid #c5effe;
+}
+#left_nav li a {
+	color: #597ffc;
+}
+#current_left_nav a {
+	color: red;
+}
+#search_lable {
+	float:left;
+	margin: 20px auto 20px auto;
+	padding:0px;
+	width:700px;
+	background-color: #e2eee6;
+}
+#search_lable ul {
+	float:left;
+	margin:0px auto 0px auto;
+	padding: 10px 0 5px 0;
+	width:698px;
+	list-style: none;
+}
+#search_form {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0 0 0 15px;
+	width: 590px;
+	display: block;
+}
+#key {
+	height: 20px;
+	font-size: 17px;
+}
+#new_book_label {
+	float:left;
+	margin:0px 5px 0px auto;
+	padding: 0px 5px 0px 5px;
+	width: 78px;
+	display: block;
+	font-weight: bold;
+	font-size: 18px;
+}
+#new_book_label a {
+	color: #ac5dee;
+}
+#books_panel {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:698px;
+	border: 1px solid #dca3fd;
+}
+#book_list {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0 0 0 ;
+	width:700px;
+	list-style: none;
+}
+.book_item {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:10px 0 10px 0px;
+	width:698px;
+	display: block;
+	border-bottom: 1px solid #dbc7e6;
+}
+.book_item_panel {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:698px;
+	list-style: none;
+}
+.book_image_panel {
+	float:left;
+	margin:0px auto 0px 10px;
+	padding:0px;
+	width:138px;
+	display: block;
+	text-align: center;
+	border: 1px solid #126;
+}
+.book_content_panel {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0 0 0 10px;
+	width:530px;
+	display: block;
+}
+.book_content {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:538px;
+	list-style: none;
+}
+.book_content li {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:5px 0 0 0;
+	width:538px;
+	display: block;
+}
+#paginating {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:10px 0 20px 10px;
+	width:690px;
+	text-align: right;
+}
+.search_book_input {
+	color: #d4d4d4;
+}

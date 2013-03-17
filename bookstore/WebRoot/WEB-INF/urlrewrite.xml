@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN"
+        "http://www.tuckey.org/res/dtds/urlrewrite4.0.dtd">
+
+<!--
+
+    Configuration file for UrlRewriteFilter
+    http://www.tuckey.org/urlrewrite/
+
+-->
+<urlrewrite>
+
+    <rule>
+        <note></note>
+        <from>/test/status/$</from>
+        <to>/rewrite-status</to>
+    </rule>
+    <outbound-rule>
+        <note></note>
+        <from>/rewrite-status$</from>
+        <to type="redirect">/test/status/</to>
+    </outbound-rule>
+
+    <rule>
+        <note></note>
+        <from>/index$</from>
+        <to>/user/index.action</to>
+    </rule>
+    <outbound-rule>
+        <note></note>
+        <from>/user/index.action$</from>
+        <to>/index</to>
+    </outbound-rule>
+
+
+
+
+</urlrewrite>
+

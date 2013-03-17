@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >          
+<hibernate-mapping>
+	<class name="com.albert.bs.model.Book" catalog="bookstore" table="book" dynamic-insert="true" dynamic-update="true">
+		<cache usage="nonstrict-read-write" region="com.albert.bs.model.Book" include="all"/>
+		<id name="bookId" type="string" column="bookid">
+			<generator class="uuid.hex"></generator>
+		</id>
+		<property name="name" column="name" type="string"></property>
+		<property name="author" column="author" type="string"></property>
+		<many-to-one name="category" class="com.albert.bs.model.LowCategory" column="categoryid" lazy="false"></many-to-one>
+		<property name="description" column="description" type="string"></property>
+		<property name="imageUrl" column="imageurl" type="string"></property>
+		<property name="bid" column="bid" type="double" scale="8" precision="2"></property>
+		<property name="originalPrice" column="originalprice" type="double"></property>
+		<property name="discount" column="discount" type="integer"></property>
+		<property name="price" column="price" type="double" scale="8" precision="2"></property>
+		<many-to-one name="publisher" column="publisherid" lazy="false"></many-to-one>
+		<property name="publishDate" column="publishdate" type="date"></property>
+		<property name="printCount" column="printcount" type="integer"></property>
+		<property name="printDate" column="printdate" type="date"></property>
+		<property name="onShelfDate" column="onshelfdate" type="date"></property>
+		<property name="stock" column="stock" type="integer"></property>
+		<property name="status" column="status" type="integer"></property>
+		<set name="comments">
+			<key column="bookid"></key>
+			<one-to-many class="com.albert.bs.model.Comment"/>
+		</set>
+		<set name="orderItems">
+			<key column="bookid"></key>
+			<one-to-many class="com.albert.bs.model.OrderItem"/>
+		</set>
+	</class>
+</hibernate-mapping>

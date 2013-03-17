@@ -1,0 +1,90 @@
+@CHARSET "UTF-8";
+html,body {
+	margin: 0px;
+	padding: 0px;
+	font-family: "仿宋";
+}
+#top {
+	float: left;
+	width: 900px;
+	margin: 0px auto;
+	margin: 0 auto;
+	padding: 0px 0 50px 0;
+	border-bottom: 3px solid #cfcece;
+}
+
+#login {
+	float: left;
+	margin: 0 auto;
+	padding: 5px 10px 5px 0;
+	width: 890px;
+	text-align: right;
+	border-bottom: 1px solid #cfcece;
+	background-color: #ece8e8;
+}
+
+#login ul, #login li {
+	list-style: none;
+	display: inline;
+	padding-left: 10px;
+}
+
+#logo_panel {
+	float: left;
+	margin: 0 auto;
+	padding: 0px;
+	width: 200px;
+}
+#search {
+	float: left;
+	margin: 0 auto;
+	padding: 70px 50px 20px 0;
+	width: 650px;
+}
+#search_form {
+	position: absolute;
+	left: 340px;
+	top: 100px;
+	width: 547px;
+}
+.search_icon {
+	float: left;
+	margin: 0 auto;
+	padding: 0px;
+	height:30px;
+	width: 42px;
+}
+.input_label {
+	float: left;
+	margin: 0 auto;
+	padding: 0 0 0 15px;
+	width: 350px;
+	border-top: 3px #9DC0E7 solid;
+	border-bottom: 3px #9DC0E7 solid;
+}
+.search_button {
+	float: left;
+	margin: 0 auto;
+	padding: 0px;
+	height:30px;
+	width: 140px;
+}
+#key {
+	height: 30px;
+	width: 350px;
+	border: 0px;
+	font-size: 20px;
+	border-style: none;
+}
+.search_book_input {
+	color: #d4d4d4;
+	font-style: italic;
+}
+a {
+	color: #72a8c9;
+	text-decoration: none;
+}
+a:hover {
+	color: #3a83af;
+	text-decoration: underline;
+}

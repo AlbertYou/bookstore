@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >          
+<hibernate-mapping>
+	<class name="com.albert.bs.model.Product" catalog="bookstore" table="product" dynamic-insert="true" dynamic-update="true">
+		<id name="productId" type="string" column="productid">
+			<generator class="uuid.hex"></generator>
+		</id>
+		<many-to-one name="user" column="userid"></many-to-one>
+		<many-to-one name="book" column="bookid" lazy="false"></many-to-one>
+		<property name="quantity" column="quantity" type="integer"></property>
+	</class>
+</hibernate-mapping>

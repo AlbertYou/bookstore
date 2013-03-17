@@ -1,0 +1,200 @@
+@CHARSET "UTF-8";
+#page {
+	position:relative;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:900px;
+}
+#header {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:900px;
+}
+#content {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0 0 30px 0;
+	width:900px;
+}
+#footer {
+	float:left;
+	width:900px;
+	height:80px;
+	margin:0px;
+	padding:0px;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+#bookinfo {
+	float:left;
+	margin:0px auto 0px auto;
+	padding: 40px 0 20px 0;
+	width:900px;
+}
+#book_show {
+	float:left;
+	margin:0px auto 0px auto;
+	padding: 0px 0 0 100px;
+	width: 100px;
+}
+#book_detail {
+	float:left;
+	margin:0px auto 0px auto;
+	padding: 0px 0 0 50px;
+	width: 300px;
+}
+#book_title {
+	float:left;
+	margin:0px auto 0px auto;
+	padding: 0 0 15px 0;
+	width:590px;
+	font-size: 23px;
+	font-weight: bold;
+}
+#book_title a {
+	color: #1daff3;
+}
+#price_label {
+	color: #c30005;
+}
+#discount_label {
+	color: orange;
+}
+
+#comment_nav {
+	float:left;
+	margin: 10px auto 10px auto;
+	padding: 10px 0 5px 10px;
+	width:890px;
+	font-size: 22px;
+	font-weight: bold;
+	color: #115161;
+	background-color: #8b9fa4;
+}
+#book_comment {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:900px;
+}
+#comment_list {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:900px;
+	list-style: none;
+}
+.comment_item {
+	float:left;
+	margin:0px auto 0px auto;
+	padding: 15px 0 0 0;
+	width:900px;
+	display: block;
+}
+.comment_info {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:900px;
+	list-style: none;
+}
+.comment_title {
+	float:left;
+	margin:0px auto 0px auto;
+	padding: 5px 0 3px 10px;
+	width: 890px;
+	display: block;
+	color: #76c9f0;
+	font-weight: bold;
+	font-size: 20px;
+	background-color: #f3f1f5;
+}
+.comment_author {
+	float:left;
+	margin:0px auto 0px auto;
+	padding: 10px 0 0 10px;
+	width:890px;
+	display: block;
+}
+.comment_author ul {
+	float:left;
+	margin:0px auto 0px auto;
+	padding: 0px;
+	width:890px;
+	list-style: none;
+}
+.comment_author_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding: 0 15px 0 25px;
+	color:
+	display: block;
+}
+.author_label {
+	color: #3539f5;
+}
+.comment_score_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding: 0px;
+	width: 50px;
+	display: block;
+	color: orange;
+}
+.comment_date_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding: 0 10px 0 0;
+	width: 620px;
+	text-align: right;
+	display: block;
+}
+.comment_content {
+	float:left;
+	margin:0px auto 0px auto;
+	padding: 10px 0 15px 10px;
+	width: 890px;
+	display: block;
+	text-indent: 2em;
+}
+#comment_other_panel {
+	float:left;
+	margin:0px auto 0px auto;
+	padding: 0px;
+	width: 900px;
+}
+#nocomment_lable {
+	float:left;
+	margin:0px auto 0px auto;
+	padding: 30px 0px 20px 0px;
+	width: 880px;
+	font-weight: bold;
+	font-size: 20px;
+	color: #9fdbfa;
+	text-align: center;
+}
+#seeallcomments_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding: 30px 20px 20px 0px;
+	width: 880px;
+	font-weight: bold;
+	font-size: 20px;
+	text-align: right;
+}
+#seeallcomments_label a {
+	color: #9fdbfa;
+	text-decoration: underline;
+}
+#paginating {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0 10px 10px 0;
+	width: 890px;
+	text-align: right;
+}

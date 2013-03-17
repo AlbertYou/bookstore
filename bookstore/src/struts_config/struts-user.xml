@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC 
+          "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+          "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="user" namespace="/user" extends="main">
+		<default-interceptor-ref name="userDefaultStack"></default-interceptor-ref>
+		<global-results>
+ 	         <result name="login">/WEB-INF/user/user/login.jsp</result>
+		</global-results>
+		
+		<action name="validationcode" class="com.albert.bs.action.ValidationCodeAction">
+			<result type="validationCodeResult"></result>
+		</action>
+		<action name="index" class="userIndexAction">
+			<result>/WEB-INF/user/index.jsp</result>
+		</action>
+		<action name="tologin" class="toLoginAction">
+			<result>/WEB-INF/user/user/login.jsp</result>
+			<result name="index" type="redirectAction">index.action</result>
+		</action>
+		<action name="existusernameoremail" class="existUsernameOrEmailAction"></action>
+		<action name="existusername" class="existUsernameAction"></action>
+		<action name="existemail" class="existEmailAction"></action>
+		<action name="toregister" class="userAction">
+			<result>/WEB-INF/user/user/register.jsp</result>
+		</action>
+		<action name="login" class="loginAction">
+			<interceptor-ref name="lastUrlInterceptor"></interceptor-ref>
+			<interceptor-ref name="userDefaultStack"></interceptor-ref>
+			<result type="redirectAction">index.action</result>
+			<result name="input" type="redirectAction">tologin.action</result>
+		</action>
+		<action name="register" class="registerAction">
+			<result>/WEB-INF/user/user/register_success.jsp</result>
+			<result name="input">/WEB-INF/user/user/register.jsp</result>
+		</action>
+		<action name="logout" class="logoutAction">
+	        <interceptor-ref name="defaultStack"></interceptor-ref>
+			<result type="redirectAction">index.action</result>
+		</action>
+		<action name="forgetpsw" class="userAction">
+			<result>/WEB-INF/user/user/password_find.jsp</result>
+		</action>
+		<action name="findpsw" class="findPasswordAction">
+			<result>/WEB-INF/user/user/password_new.jsp</result>
+			<result name="input">/WEB-INF/user/user/password_find.jsp</result>
+		</action>
+		<action name="tomodifypsw" class="toModifyPasswordAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result>/WEB-INF/user/user/password_modify.jsp</result>
+		</action>
+		<action name="modifypsw" class="modifyPasswordAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result type="chain">tomodifypsw</result>
+			<result name="input" type="redirectAction">tomodifypsw</result>
+		</action>
+		<action name="toedituser" class="toEditUserAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result>/WEB-INF/user/user/user_edit.jsp</result>
+		</action>
+		<action name="edituser" class="editUserAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result>/WEB-INF/user/user/user_edit.jsp</result>
+			<result name="input" type="redirectAction">toedituser.action</result>
+		</action>
+		<action name="billboard" class="billboardAction">
+			<result>/WEB-INF/user/billboard/billboard_info.jsp</result>
+		</action>
+		<action name="homepage" class="homePageAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result>/WEB-INF/user/user/homepage.jsp</result>
+		</action>
+		<action name="purchasedbooks" class="purchasedBooksAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result>/WEB-INF/user/book/book_purchased.jsp</result>
+		</action>
+
+		<action name="book" class="bookAction">
+			<result>/WEB-INF/user/book/book_info.jsp</result>
+			<result name="input" type="redirectAction">index.action</result>
+		</action>
+		<action name="commentsofbook" class="commentsOfBookAction">
+			<result>/WEB-INF/user/book/book_comments.jsp</result>
+		</action>
+		<action name="findbook" class="findBookAction">
+			<result>/WEB-INF/user/book/book_search.jsp</result>
+		</action>
+		<action name="categorybooks" class="categoryBooksAction">
+			<result>/WEB-INF/user/book/book_category.jsp</result>
+		</action>
+		<action name="newbooklist" class="newBookListAction">
+			<result>/WEB-INF/user/book/book_new.jsp</result>
+		</action>
+		<action name="goodbooklist" class="goodBookListAction">
+			<result>/WEB-INF/user/book/book_good.jsp</result>
+		</action>
+		<action name="bestsalebookList" class="bestSaleBookListAction">
+			<result>/WEB-INF/user/book/book_bestsale.jsp</result>
+		</action>
+		<action name="bestsellbooklist" class="bestSellBookListAction">
+			<result>/WEB-INF/user/book/book_bestsell.jsp</result>
+		</action>
+		
+		<action name="tocart" class="userAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result>/WEB-INF/user/shopping/cart.jsp</result>
+		</action>
+		<action name="addcart" class="addCartAction">
+			<result>/WEB-INF/user/shopping/cart.jsp</result>
+			<result name="bookinfo" type="chain">book</result>
+		</action>
+		<action name="changequantity" class="changeQuantityAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result type="redirectAction">tocart</result>
+			<result name="input">/WEB-INF/user/shopping/cart.jsp</result>
+		</action>
+		<action name="deletecart" class="deleteCartAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result type="redirectAction">tocart</result>
+		</action>
+		<action name="clearcart" class="clearCartAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result type="redirectAction">tocart</result>
+		</action>
+
+		<action name="addcollect" class="addCollectAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result type="redirectAction">collectlist</result>
+		</action>
+		<action name="collectlist" class="collectListAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result>/WEB-INF/user/user/collect_list.jsp</result>
+		</action>
+		<action name="clearcollect" class="clearCollectAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result type="redirectAction">collectlist</result>
+		</action>
+		<action name="modifycollecttitle" class="modifyCollectTitleAction"></action>
+		<action name="deletecollect" class="deleteCollectAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result type="redirectAction">collectlist</result>
+		</action>
+		<action name="movetocollect" class="moveToCollectAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result type="redirectAction">tocart</result>
+		</action>
+		
+		<action name="recipientlist" class="recipientListAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result>/WEB-INF/user/recipient/recipient.jsp</result>
+		</action>
+		<action name="addrecipient" class="addRecipientAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result type="chain">recipientlist</result>
+			<result name="input" type="redirectAction">recipientlist</result>
+			<result name="confirmorder" type="redirectAction">confirmorder</result>
+		</action>
+		<action name="deleterecipient" class="deleteRecipientAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result type="redirectAction">recipientlist</result>
+		</action>
+		<action name="recipient" class="recipientAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result>/WEB-INF/user/recipient/recipient_modify.jsp</result>
+		</action>
+		<action name="modifyrecipient" class="modifyRecipientAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result type="redirectAction">recipientlist</result>
+			<result name="input" type="redirectAction">recipientlist</result>
+		</action>
+		<action name="defaultrecipient" class="defaultRecipientAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result type="redirectAction">recipientlist</result>
+			<result name="confirmorder" type="redirectAction">confirmorder</result>
+		</action>
+		
+		<action name="confirmorder" class="confirmOrderAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result>/WEB-INF/user/shopping/confirm_order.jsp</result>
+			<result name="input">/WEB-INF/user/shopping/cart.jsp</result>
+		</action>
+		<action name="finishorder" class="finishOrderAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result>/WEB-INF/user/shopping/buy_success.jsp</result>
+		</action>
+
+		<action name="buybook" class="buyBookAction">
+			<interceptor-ref name="lastUrlParamInterceptor"></interceptor-ref>
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result>/WEB-INF/user/shopping/buy_now.jsp</result>
+			<result name="input" type="chain">book</result>
+		</action>
+		<action name="defaultrecipientnow" class="defaultRecipientNowAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result>/WEB-INF/user/shopping/buy_now.jsp</result>
+		</action>
+		<action name="addrecipientnow" class="addRecipientNowAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result>/WEB-INF/user/shopping/buy_now.jsp</result>
+		</action>
+		<action name="addorder" class="finishOrderNowAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result>/WEB-INF/user/shopping/buy_success.jsp</result>
+		</action>
+		<action name="deliveredorderlist" class="deliveredOrderListAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result>/WEB-INF/user/order/order_delivered.jsp</result>
+		</action>
+		<action name="undeliveredorderlist" class="unDeliveredOrdersListAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result>/WEB-INF/user/order/order_undelivered.jsp</result>
+		</action>
+		<action name="finishedorderlist" class="finishedOrdersListAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result>/WEB-INF/user/order/order_finished.jsp</result>
+		</action>
+		<action name="receivebook" class="receiveBookAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result>/WEB-INF/user/order/order_success.jsp</result>
+		</action>
+		<action name="nocomment" class="noCommentAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result>/WEB-INF/user/comment/comment_not.jsp</result>
+		</action>
+		<action name="allcomments" class="allCommentsAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result>/WEB-INF/user/comment/comment_all.jsp</result>
+		</action>
+		<action name="toaddcomment" class="toAddCommentAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result>/WEB-INF/user/comment/comment_add.jsp</result>
+		</action>
+		<action name="addcomment" class="addCommentAction">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result>/WEB-INF/user/comment/comment_success.jsp</result>
+			<result name="input" type="redirectAction">nocomment</result>
+		</action>
+		
+	</package>
+</struts>

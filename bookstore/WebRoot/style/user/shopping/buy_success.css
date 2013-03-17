@@ -1,0 +1,50 @@
+@CHARSET "UTF-8";
+#page {
+	position: relative;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 900px;
+}
+#header {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 900px;
+}
+#content {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 20px 0 30px 0;
+	width: 900px;
+}
+#footer {
+	float: left;
+	width: 900px;
+	margin: 0px;
+	padding: 0px;
+}
+#ordernumber_panel {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 60px 0 0 0;
+	width: 900px;
+	font-size:20px;
+	font-weight: bold;
+	text-align: center;
+}
+#ordernumber_label {
+	padding-left: 10px;
+	font-size:25px;
+	color: red;
+}
+#result {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 30px 0 100px 0;
+	width: 900px;
+	font-size:20px;
+	text-align: center;
+}
+#result a {
+	color: #63abfb;
+}

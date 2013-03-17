@@ -1,0 +1,157 @@
+@CHARSET "UTF-8";
+#page {
+	position:relative;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:900px;
+}
+#header {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:900px;
+}
+#content {
+	float:left;
+	margin: 30px auto 40px auto;
+	padding:0px;
+	width:900px;
+}
+#left {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:200px;
+}
+#right {
+	float:right;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:700px;
+}
+#footer {
+	float:left;
+	width:900px;
+	margin:0px;
+	padding:0px;
+}
+#left_nav {
+	float:left;
+	margin: 0px auto 100px auto;
+	padding: 20px 0 0 20px;
+	width:180px;
+	list-style: none;
+}
+#left_nav li {
+	float:left;
+	margin:0px 20px 0px auto;
+	padding: 5px 0 0 10px;
+	width: 140px;
+	display: block;
+	font-weight: bold;
+	font-size: 19px;
+	border-bottom: 1px solid #c5effe;
+}
+#left_nav li a {
+	color: #597ffc;
+}
+#current_left_nav a {
+	color: red;
+}
+#title_panel {
+	float:left;
+	margin: 10px auto 0px auto;
+	padding:10px 0 5px 10px;
+	width:690px;
+	background-color: #e2eee6;
+}
+#title_panel ul {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:690px;
+	list-style: none;
+}
+#title_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:420px;
+	display: block;
+	color: orange;
+	font-weight: bold;
+	font-size: 18px;
+}
+#stock_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:270px;
+	display: block;
+}
+#books_panel {
+	float:left;
+	margin: 20px auto 0px auto;
+	padding:0px;
+	width: 698px;
+	border: 1px solid #dca3fd;
+}
+#book_list {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0 0 0 ;
+	width:698px;
+	list-style: none;
+}
+.book_item {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:10px 0 10px 0px;
+	width:698px;
+	display: block;
+	border-bottom: 1px solid #dbc7e6;
+}
+.book_item_panel {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:698px;
+	list-style: none;
+}
+.book_image_panel {
+	float:left;
+	margin:0px auto 0px 10px;
+	padding:0px;
+	width:140px;
+	display: block;
+	text-align: center;
+	border: 1px solid #126;
+}
+.book_content_panel {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0 0 0 10px;
+	width:536px;
+	display: block;
+}
+.book_content {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:536px;
+	list-style: none;
+}
+.book_content li {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:5px 0 0 0;
+	width:536px;
+	display: block;
+}
+#paginating {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:10px 0 5px 10px;
+	width:690px;
+	text-align: center;
+}

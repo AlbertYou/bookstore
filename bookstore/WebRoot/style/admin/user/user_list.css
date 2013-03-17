@@ -1,0 +1,160 @@
+@CHARSET "UTF-8";
+#page {
+	position:relative;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:900px;
+}
+#header {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:900px;
+}
+#content {
+	float:left;
+	margin: 40px auto 50px auto;
+	padding:0px;
+	width:900px;
+}
+#footer {
+	float:left;
+	width:900px;
+	margin:0px;
+	padding:0px;
+}
+#search_panel {
+	float:left;
+	margin:0px auto 30px auto;
+	padding:0px;
+	width:900px;
+	background-color: #a4a;
+}
+#search_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:10px 0 5px 0;
+	width:900px;
+	list-style: none;
+}
+#search_form {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0 0 0 20px;
+	width: 480px;
+	display: block;
+	font-size: 18px;
+}
+#username {
+	margin:0px 10px 0px 5px;
+	padding: 0px;
+	height: 18px;
+	font-size: 15px;
+}
+#usercount_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0 10px 0 0;
+	width:390px;
+	display: block;
+	font-size: 20px;
+	text-align: right;
+}
+#users_panel {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:900px;
+}
+#user_list {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:900px;
+	list-style: none;
+}
+.user_item {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:900px;
+	display: block;
+}
+.user_title {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:10px 0 5px 0;
+	width:900px;
+	list-style: none;
+	font-weight: bold;
+	text-align: center;
+	background-color:#e97efd;
+	border-bottom: 2px solid #d76ceb;
+}
+.user_info {
+	float:left;
+	margin:0px auto 0px auto;
+	padding: 10px 0 5px 0;
+	width:900px;
+	list-style: none;
+	text-align: center;
+	border-bottom: 1px solid #e2a9ed;
+	background-color:#e7c3ee;
+}
+.username_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	display: block;
+	width: 200px;
+}
+.email_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	display: block;
+	width: 250px;
+}
+.sex_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	display: block;
+	width: 80px;
+}
+.phone_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	display: block;
+	width: 160px;
+}
+.status_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	display: block;
+	width: 80px;
+}
+.modify_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	display: block;
+	width: 80px;
+}
+.operate_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	display: block;
+	width: 110px;
+}
+
+#paginating {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:10px 10px 5px 0;
+	width: 890px;
+	text-align: right;
+}

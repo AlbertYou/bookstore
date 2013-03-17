@@ -1,0 +1,216 @@
+@CHARSET "UTF-8";
+#page {
+	position:relative;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:900px;
+}
+#header {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:900px;
+}
+#content {
+	float:center;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:900px;
+}
+#left {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:200px;
+}
+#right {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:700px;
+}
+#footer {
+	float:left;
+	width:900px;
+	margin:0px;
+	padding:0px;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+#left_nav {
+	float:left;
+	margin: 30px auto 100px auto;
+	padding: 20px 0 0 20px;
+	width:180px;
+	list-style: none;
+}
+#left_nav li {
+	float:left;
+	margin:0px 20px 0px auto;
+	padding: 5px 0 0 10px;
+	width: 140px;
+	display: block;
+	font-weight: bold;
+	font-size: 19px;
+	border-bottom: 1px solid #c5effe;
+}
+#left_nav li a {
+	color: #597ffc;
+}
+#current_left_nav a {
+	color: red;
+}
+#temp_nav {
+	float: left;
+	margin: 40px auto 20px auto;
+	padding: 10px 0 5px 10px;
+	width: 690px;
+	font-weight: bold;
+	font-size: 20px;
+	color: orange;
+	background-color: #45fc56;
+}
+#comment_panel {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 700px;
+}
+#comment_list {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 700px;
+	list-style: none;
+}
+.comment_item {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 700px;
+	display: block;
+}
+.comment_title_panel {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 10px 0 5px 0;
+	width: 700px;
+	list-style: none;
+	text-align: center;
+	font-weight: bold;
+	background-color: #a1fcaa;
+}
+.comment_info {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 7px 0 5px 0;
+	width: 700px;
+	list-style: none;
+	border-bottom: 1px solid #183;
+}
+.book_info {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 230px;
+	text-align: center;
+	display: block;
+}
+.book_iamge {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 100px;
+	text-align: center;
+	display: block;
+}
+.book_other {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 130px;
+	display: block;
+}
+.comment_title_score {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 90px;
+	text-align: center;
+	display: block;
+}
+.comment_score {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 15px 0 0 0;
+	width: 90px;
+	text-align: center;
+	display: block;
+}
+.comment_title_content {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 380px;
+	display: block;
+}
+.comment_content {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 380px;
+	display: block;
+}
+.book_name {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 7px 0 0 0;
+	width: 130px;
+}
+.book_price {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 7px 0 0 0;
+	width: 130px;
+	color: orange;
+}
+.comment_title_ul {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0 0 3px 0;
+	width: 380px;
+	list-style: none;
+}
+.comment_title {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	display: inline;
+	font-weight: bold;
+	font-size: 20px;
+	color: blue;
+}
+.comment_time {
+	float: right;
+	margin: 0px auto 0px auto;
+	padding: 0 10px 0 10px;
+	display: inline;
+	font-size: 15px;
+}
+.comment {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0 10px 3px 0;
+	width: 380px;
+}
+#paginating {
+	float: left;
+	margin: 0px auto 50px auto;
+	padding: 5px 15px 5px 0;
+	width: 685px;
+	text-align: right;
+}

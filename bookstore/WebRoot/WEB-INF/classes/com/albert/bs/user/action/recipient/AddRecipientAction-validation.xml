@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC 
+  		"-//OpenSymphony Group//XWork Validator 1.0.2//EN" 
+  		"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+<validators>
+	<field name="recipient">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>${getText("recipient.recipient.isnull") }</message>
+		</field-validator>
+	</field>
+	<field name="address">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>${getText("recipient.address.isnull") }</message>
+		</field-validator>
+	</field>
+	<field name="zipcode">
+		<field-validator type="requiredstring" short-circuit="true">
+			<param name="trim">true</param>
+			<message>${getText("recipient.zipcode.isnull") }</message>
+		</field-validator>
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[^[0-9]{6}$]]></param>
+			<message>${getText("recipient.zipcode.error") }</message>
+		</field-validator>
+	</field>
+	<field name="phone">
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[^1[0-9]{10}$]]></param>
+			<message>${getText("phone.error") }</message>
+		</field-validator>
+	</field>
+</validators>

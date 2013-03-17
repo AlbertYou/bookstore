@@ -1,0 +1,223 @@
+@CHARSET "UTF-8";
+#page {
+	position: relative;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 900px;
+}
+#header {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 900px;
+}
+#content {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 20px 0 30px 0;
+	width: 900px;
+}
+#left {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 200px;
+}
+#right {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 700px;
+}
+#footer {
+	float:left;
+	width:900px;
+	margin:0px auto 0px auto;
+	padding:0px;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+#nav_panel {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	padding-top:10px;
+	width: 200px;
+}
+.nav_item1 {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 7px 0 5px 20px;
+	width: 180px;
+	border-bottom: 1px solid #5390cf;
+	background-color: #cee4fa;
+}
+.nav_item2 {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 7px 0 5px 40px;
+	width: 160px;
+	border-bottom: 1px solid #c9daeb;
+	background-color: #ebf4fd;
+}
+.current_nav {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 7px 0 5px 40px;
+	width: 160px;
+	border-bottom: 1px solid #c9daeb;
+	background-color: #dee8f1;
+}
+.nav_item1, .nav_item1 a, .nav_item2 a{
+	color: #6392fb;
+}
+.current_nav a{
+	color: #058cf4;
+	font-weight: bold;
+}
+#temp_nav {
+	float: left;
+	margin: 10px auto 0px 10px;
+	padding: 10px 0px 0px 10px;
+	width: 680px;
+	height:25px;
+	background-color: #dfd9fa;
+}
+#order_total {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	height:25px;
+	color: orange;
+	font-weight: bold;
+	font-size: 20px;
+	background-color: #dfd9fa;
+}
+#order_sort {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 5px 0 0 20px;
+	height: 20px;
+	font-size: 15px;
+	color: gray;
+	background-color: #dfd9fa;
+}
+#orders {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 700px;
+}
+#orderlist {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 5px 0px 10px 10px;
+	width: 690px;
+	list-style: none;
+	display: block;
+}
+.order_detail {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:10px 0 0 0;
+	width:690px;
+	display: block;
+}
+.order_title {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:10px 0 15px 5px;
+	width:685px;
+	list-style: none;
+	background-color:#e2fbed;
+}
+.ordernumber_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:560px;
+	font-weight: bold;
+	display: inline;
+	color: #82d5a6;
+}
+.confirmorder_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:125px;
+	font-weight: bold;
+	font-size: 21px;
+	display: inline;
+}
+.confirmorder_label a {
+	color: #3dc879;
+}
+.ordertime_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:10px 0 5px 5px;
+	width:675px;
+	list-style: none;
+}
+.ordercreatetime_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:200px;
+	display: inline;
+}
+.orderdeliveriedtime_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:375px;
+	display: inline;
+}
+.ordertotalprice_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:100px;
+	color: orange;
+	display: inline;
+}
+.book_list {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:7px 0 0px 0;
+	width:670px;
+	list-style: none;
+}
+.book_list li {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:670px;
+	display: block;
+}
+.book_detail {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:670px;
+	list-style: none;
+	border-bottom: 1px solid #ddf8bd;
+}
+.book_detail li {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:5px 0 5px 10px;
+	width: 120px;
+	display: inline;
+}
+#paginating {
+	float:left;
+	margin:0px auto 0px auto;
+	padding: 0px 10px 5px 0px;
+	width: 690px;
+	text-align: right;
+}

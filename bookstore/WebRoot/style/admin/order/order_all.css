@@ -1,0 +1,46 @@
+@CHARSET "UTF-8";
+#query_panel {
+	float: left;
+	margin: 0 auto 20px auto;
+	padding: 0px;
+	width: 690px;
+	background-color: #dae0f7;
+}
+#query_panel ul {
+	float: left;
+	margin: 15px auto 0px auto;
+	padding: 0px;
+	width: 690px;
+	list-style: none;
+}
+#query_panel ul li {
+	float: left;
+	margin: 0 auto 0px auto;
+	padding: 0 0 0 10px;
+	display: block;
+	color: orange;
+}
+#createTime {
+	margin: 0 0px 14px 0;
+}
+#query_button {
+	margin: 0 auto 0px auto;
+	padding: 0px;
+	height: 20px;
+}
+.ordercount_label {
+	width: 100px;
+}
+
+.ordertotalprice_label {
+	width: 120px;
+}
+
+.order_status {
+	float: left;
+	margin: 0 auto 0 auto;
+	padding: 0;
+	width: 120px;
+	display: block;
+	text-align: right;
+}

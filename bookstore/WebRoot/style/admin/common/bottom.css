@@ -1,0 +1,34 @@
+@CHARSET "UTF-8";
+
+#copyright_panel {
+	float: left;
+	margin: 0 auto 0 auto;
+	padding: 10px 0 0 0;
+	width: 900px;
+	border-top:2px solid #D5D4CC;
+}
+
+#copyright_info {
+	float: left;
+	margin: 0 auto 0 auto;
+	padding: 0 0 20px 0;
+	font-size: 16px;
+	width: 900px;
+}
+
+#copyright_ul {
+	float: left;
+	margin: 0 auto 0 auto;
+	padding: 0px;
+	list-style: none;
+	width: 900px;
+}
+
+#copyright_ul li {
+	float: left;
+	margin: 0 auto 0 auto;
+	padding: 5px 0 0 0;
+	width: 900px;
+	text-align: center;
+	display: block;
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >          
+<hibernate-mapping>
+	<class name="com.albert.bs.model.LowCategory" catalog="bookstore" table="lowcategory">
+		<cache usage="read-only" region="com.albert.bs.model.LowCategory"/>
+		<id name="categoryId" type="string" column="categoryid">
+			<generator class="uuid.hex"></generator>
+		</id>
+		<property name="name" column="name" type="string" unique="true"></property>
+		<many-to-one name="parent" column="parent" lazy="false"></many-to-one>
+		<set name="books">
+			<key column="categoryid"></key>
+			<one-to-many class="com.albert.bs.model.Book"/>
+		</set>
+	</class>
+</hibernate-mapping>

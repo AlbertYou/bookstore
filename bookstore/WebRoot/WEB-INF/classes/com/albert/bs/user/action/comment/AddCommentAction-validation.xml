@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC 
+  		"-//OpenSymphony Group//XWork Validator 1.0.2//EN" 
+  		"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+<validators>
+	<field name="score">
+		<field-validator type="int">
+			<param name="min">1</param>
+			<param name="max">5</param>
+			<message>${getText("comment.score.error") }</message>
+		</field-validator>
+	</field>
+	<field name="title">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>${getText("comment.title.isnull") }</message>
+		</field-validator>
+	</field>
+	<field name="content">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>${getText("comment.content.isnull") }</message>
+		</field-validator>
+	</field>
+</validators>

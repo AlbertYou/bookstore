@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+<!-- 
+       <bean id="myDataSource" class="org.logicalcobwebs.proxool.ProxoolDataSource">
+       		<property name="driver" value="com.mysql.jdbc.Driver"></property>
+       		<property name="driverUrl" value="jdbc:mysql://localhost:3306/bookstore"></property>
+       		<property name="alias" value="proxool"></property>
+       		<property name="user" value="root"></property>
+       		<property name="password" value="root"></property>
+       </bean>
+ -->
+ 	   <bean id="propertyPlaceholderConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+ 	   		<property name="location" value="/WEB-INF/datasource/spring-config.properties"></property>
+ 	   </bean>	
+       <bean id="myDataSource" class="org.logicalcobwebs.proxool.ProxoolDataSource">
+       		<property name="driver" value="${driver}"></property>
+       		<property name="driverUrl" value="${driverUrl}"></property>
+       		<property name="alias" value="${alias}"></property>
+       		<property name="user" value="${user}"></property>
+       		<property name="password" value="${password}"></property>
+       </bean>
+ 	
+       <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+       		<property name="dataSource" ref="myDataSource"></property>
+       		<property name="hibernateProperties">
+       			<props>
+       				<prop key="hibernate.show_sql">false</prop>
+       				<prop key="hibernate.format_sql">false</prop>
+       				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+       				<prop key="hibernate.current_session_context_class">thread</prop>
+       				<prop key="hibernate.cache.use_second_level_cache">true</prop>
+       				<prop key="hibernate.cache.use_query_cache">true</prop>
+       				<prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+       			</props>
+       		</property>
+       		<property name="mappingResources">
+       			<list>
+       				<value>com/albert/bs/model/hbm/Admin.hbm.xml</value>
+       				<value>com/albert/bs/model/hbm/User.hbm.xml</value>
+       				<value>com/albert/bs/model/hbm/Book.hbm.xml</value>
+       				<value>com/albert/bs/model/hbm/TopCategory.hbm.xml</value>
+       				<value>com/albert/bs/model/hbm/LowCategory.hbm.xml</value>
+       				<value>com/albert/bs/model/hbm/Billboard.hbm.xml</value>
+       				<value>com/albert/bs/model/hbm/Collect.hbm.xml</value>
+       				<value>com/albert/bs/model/hbm/Comment.hbm.xml</value>
+       				<value>com/albert/bs/model/hbm/Recipient.hbm.xml</value>
+       				<value>com/albert/bs/model/hbm/Order.hbm.xml</value>
+       				<value>com/albert/bs/model/hbm/OrderItem.hbm.xml</value>
+       				<value>com/albert/bs/model/hbm/Publisher.hbm.xml</value>
+       				<value>com/albert/bs/model/hbm/Product.hbm.xml</value>
+       			</list>
+       		</property>
+       </bean>
+       
+       <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+            <property name="sessionFactory" ref="sessionFactory"></property>
+       </bean>
+       <bean id="transactionInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor">
+             <property name="transactionManager" ref="transactionManager"></property>
+             <property name="transactionAttributes">
+                  <props>
+                        <prop key="get*">PROPAGATION_REQUIRED,readOnly</prop>
+                        <prop key="*">PROPAGATION_REQUIRED,-Exception</prop>
+                  </props>
+             </property>
+       </bean>
+       <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+             <property name="beanNames">
+                 <list>
+                     <value>*Dao</value>
+                 </list>
+             </property>
+             <property name="interceptorNames">
+                 <list>
+                     <value>transactionInterceptor</value>
+                 </list>
+             </property>
+       </bean>
+       
+       <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+       		<property name="host" value="${email.host}"></property>
+       		<property name="username" value="${email.username}"></property>
+       		<property name="password" value="${email.password}"></property>
+       		<property name="javaMailProperties">
+       			<props>
+       				<prop key="mail.smtp.auth">${mail.smtp.auth}</prop>
+       				<prop key="mail.smtp.timeout">${mail.smtp.timeout}</prop>
+       			</props>
+       		</property>
+       </bean>
+       <bean id="mailMessage" class="org.springframework.mail.SimpleMailMessage">
+       		<property name="from" value="${email.from}"></property>
+       		<!-- 
+       		<property name="to">cxhyrf.2009@163.com</property>
+       		<property name="subject">标题</property>
+       		<property name="text">内容</property>
+       		 -->
+       </bean>
+       
+       
+</beans>

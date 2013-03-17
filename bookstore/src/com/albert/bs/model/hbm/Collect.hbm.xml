@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >          
+<hibernate-mapping>
+	<class name="com.albert.bs.model.Collect" catalog="bookstore" table="collect">
+		<id name="collectId" type="string" column="collectid">
+			<generator class="uuid.hex"></generator>
+		</id>
+		<many-to-one name="book" column="bookid" not-null="true" lazy="false"></many-to-one>
+		<many-to-one name="user" column="userid" not-null="true"></many-to-one>
+		<property name="title" column="title" type="string"></property>
+		<property name="collectDate" column="collectDate" type="timestamp"></property>
+	</class>
+</hibernate-mapping>

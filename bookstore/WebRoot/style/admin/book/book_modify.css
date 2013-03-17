@@ -1,0 +1,167 @@
+@CHARSET "UTF-8";
+#page {
+	position:relative;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:900px;
+}
+#header {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:900px;
+}
+#content {
+	float:left;
+	margin: 20px auto 30px auto;
+	padding:0px;
+	width:900px;
+}
+#left {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:200px;
+}
+#right {
+	float:right;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:700px;
+}
+#footer {
+	float:left;
+	width:900px;
+	margin:0px;
+	padding:0px;
+}
+#left_nav {
+	float:left;
+	margin: 30px auto 100px auto;
+	padding: 20px 0 0 20px;
+	width:180px;
+	list-style: none;
+}
+#left_nav li {
+	float:left;
+	margin:0px 20px 0px auto;
+	padding: 5px 0 0 10px;
+	width: 140px;
+	display: block;
+	font-weight: bold;
+	font-size: 19px;
+	border-bottom: 1px solid #c5effe;
+}
+#left_nav li a {
+	color: #597ffc;
+}
+#current_left_nav a {
+	color: red;
+}
+#temp_nav {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:8px 0 5px 10px;
+	width:690px;
+	font-weight: bold;
+	color: orange;
+	font-weight: bold;
+	font-size: 19px;
+	background-color:#cdf190;
+}
+#book_statistics_panel {
+	float:left;
+	margin: 30px auto 5px 40px;
+	padding: 0px 0px 8px 40px;
+	width: 500px;
+	border-left: 2px dashed #d5d5d4;
+}
+#book_statistics_panel ul {
+	float:left;
+	margin:0px auto 0px 40px;
+	padding: 0px 0px 10px 60px;
+	width: 440px;
+	border-bottom: 1px solid #cffae1;
+	list-style: none;	
+}
+#book_statistics_panel ul li {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:8px 0 5px 5px;
+	width: 215px;
+	display: block;
+}
+#modify_form {
+	float:left;
+	margin:0px auto 20px 40px;
+	padding:8px 0 3px 10px;
+	width: 500px;
+	border-left: 2px dashed #d5d5d4;
+}
+#modify_image_panel {
+	position: absolute;
+	margin:0px auto 0px auto;
+	padding:0 0px 0 0;
+	width:270px;
+	left: 600px;
+	top: 400px;
+	border: 1px solid #aaa;
+}
+#form_panel {
+	float:left;
+	margin:0px auto 0px 20px;
+	padding:8px 0 5px 40px;
+	width:400px;
+	list-style: none;
+}
+#form_panel li {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:8px 0 5px 0px;
+	width:430px;
+	display: block;
+}
+#image_title {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:10px 0 20px 10px;
+	width:240px;
+	color: orange;
+	font-weight: bold;
+}
+#image_show {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:250px;
+	text-align: center;
+}
+#new_image {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:20px 0 0 0;
+	width:250px;
+	text-align: center;
+}
+#notice_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0 10px 0 0;
+	width:240px;
+	text-align: right;
+	font-size: 14px;
+	color: red;
+}
+#modifyinfo_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding: 0 0 0 150px;
+	height: 40px;
+}
+#upload_button {
+	float:left;
+	margin:0px auto 0px auto;
+	padding: 0px 0 20px 0;
+	width:250px;
+	text-align: center;
+}

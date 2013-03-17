@@ -1,0 +1,232 @@
+@CHARSET "UTF-8";
+#page {
+	position: relative;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 900px;
+}
+#header {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 900px;
+}
+#content {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 20px 0 30px 0;
+	width: 900px;
+}
+#left {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 200px;
+}
+#right {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 700px;
+}
+#footer {
+	float:left;
+	width:900px;
+	margin:0px;
+	padding:0px;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+#nav_panel {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	padding-top:10px;
+	width: 200px;
+}
+.nav_item1 {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 7px 0 5px 20px;
+	width: 180px;
+	border-bottom: 1px solid #5390cf;
+	background-color: #cee4fa;
+}
+.nav_item2 {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 7px 0 5px 40px;
+	width: 160px;
+	border-bottom: 1px solid #c9daeb;
+	background-color: #ebf4fd;
+}
+.current_nav {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 7px 0 5px 40px;
+	width: 160px;
+	border-bottom: 1px solid #c9daeb;
+	background-color: #dee8f1;
+}
+.nav_item1, .nav_item1 a, .nav_item2 a{
+	color: #6392fb;
+}
+.current_nav a{
+	color: #058cf4;
+	font-weight: bold;
+}
+#title_panel {
+	float: left;
+	margin: 10px auto 0px 10px;
+	padding: 10px 0 5px 10px;
+	width: 680px;
+	color: orange;
+	font-weight: bold;
+	font-size: 20px;
+	background-color: #e0e8f0;
+}
+#comment_panel {
+	float: left;
+	margin: 0px auto 0px 10px;
+	padding: 0px;
+	width: 690px;
+}
+#comment_list {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 690px;
+	list-style: none;
+}
+.comment_item {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 10px 0 5px 0;
+	width: 690px;
+	display: block;
+}
+.comment_title_panel {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 10px 0 5px 0;
+	width: 690px;
+	list-style: none;
+	text-align: center;
+	font-weight: bold;
+	background-color: #eff1f0;
+}
+.book_info {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 230px;
+	text-align: center;
+	display: block;
+}
+.comment_info {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 7px 0 5px 0;
+	width: 690px;
+	list-style: none;
+	border-bottom: 1px solid #183;
+}
+.book_image {
+	float: left;
+	margin: 0px auto 0px 10px;
+	padding: 0px;
+	width: 80px;
+	text-align: center;
+	display: block;
+	border: 1px solid #84b8fe;
+}
+.book_other {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0 0 0 5px;
+	width: 125px;
+	display: block;
+}
+.comment_title_score {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 80px;
+	text-align: center;
+	display: block;
+}
+.comment_score {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 15px 0 0 0;
+	width: 80px;
+	text-align: center;
+	display: block;
+}
+.comment_title_content {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 380px;
+	display: block;
+}
+.comment_content {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 380px;
+	display: block;
+}
+.book_name {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 7px 0 0 0;
+	width: 130px;
+}
+.book_price {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 7px 0 0 0;
+	width: 130px;
+	color: orange;
+}
+.comment_title_ul {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0 0 3px 0;
+	width: 380px;
+	list-style: none;
+}
+.comment_title {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	display: inline;
+	font-weight: bold;
+	font-size: 20px;
+	color: blue;
+}
+.comment_time {
+	float: right;
+	margin: 0px auto 0px auto;
+	padding: 0 10px 0 10px;
+	display: inline;
+	font-size: 15px;
+}
+.comment {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0 10px 3px 0;
+	width: 380px;
+}
+#paginating {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 5px 15px 5px 0;
+	width: 685px;
+	text-align: right;
+}

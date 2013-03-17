@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >          
+<hibernate-mapping>
+	<class name="com.albert.bs.model.Comment" catalog="bookstore" table="comment" dynamic-insert="true" dynamic-update="true">
+		<cache usage="read-write" region="com.albert.bs.model.Comment"/>
+		<id name="commentId" type="string" column="commentid">
+			<generator class="uuid.hex"></generator>
+		</id>
+		<many-to-one name="user" column="userid" lazy="false"></many-to-one>
+		<many-to-one name="book" column="bookid" lazy="false"></many-to-one>
+		<property name="title" column="title" type="string"></property>
+		<property name="content" column="content" type="string"></property>
+		<property name="score" column="score" type="integer"></property>
+		<property name="commentDate" column="commentDate" type="timestamp"></property>
+	</class>
+</hibernate-mapping>

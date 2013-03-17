@@ -1,0 +1,91 @@
+@CHARSET "UTF-8";
+html,body {
+	margin: 0px;
+	padding: 0px;
+	font-family: "仿宋";
+}
+#page_top {
+	float:left;
+	margin: 0 auto 0 auto;
+	padding: 0px;
+	width:900px;
+}
+#top {
+	float:left;
+	margin: 0 auto 0 auto;
+	padding: 0px 0 30px 0;
+	width:900px;
+}
+#login {
+	float: left;
+	margin: 0 auto 0 auto;
+	padding: 3px 0 3px 0;
+	width:900px;
+	background-color: #eceeed;
+}
+#login ul {
+	float: left;
+	margin: 0 auto 0 auto;
+	padding: 0px 0 0 630px;
+	width:270px;
+	list-style: none;
+}
+#login li {
+	float: left;
+	margin: 0 auto 0 auto;
+	padding: 0 0 0 20px;
+	display: block;
+}
+#logo_panel {
+	float: left;
+	margin: 0 auto 0 auto;
+	padding: 0px;
+	width:900px;
+}
+#banner {
+	float:left;
+	margin: 0 auto 0 auto;
+	padding: 0px;
+	width:900px;
+	background-color:#99f8b6;
+}
+#nav {
+	float:left;
+	margin: 0 auto 0 auto;
+	padding: 0px;
+	width:900px;
+}
+#nav ul {
+	float:left;
+	margin: 0 auto 0 auto;
+	padding: 20px 0 10px 110px;
+	width:800px;
+	list-style: none;
+	display: block;
+}
+.nav_item {
+	font-size: 20px;
+	font-weight: bold;
+	display: inline;
+	width: 150px;
+}
+.nav_item a {
+	color: #077198;
+}
+.nav_current {
+	display: inline;
+	font-size: 20px;
+	width: 150px;
+}
+.nav_current a {
+	color: red;
+}
+a {
+	color: #72a8c9;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #3a83af;
+	text-decoration: underline;
+}

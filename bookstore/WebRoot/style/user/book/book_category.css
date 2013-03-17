@@ -1,0 +1,138 @@
+@CHARSET "UTF-8";
+
+#page {
+	position: relative;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 900px;
+}
+
+#header {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 900px;
+}
+
+#content {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 900px;
+}
+
+#breadcrumb {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 8px 0 4px 0;
+	width: 900px;
+	height: 25px;
+	background-color: #e9f6ee;
+}
+
+#left {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 200px;
+}
+
+#right {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 700px;
+}
+
+#category {
+	float: left;
+	width: 200px;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+}
+
+#book_list {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 15px 0 0 10px;
+	width: 690px;
+}
+
+#pagepanel {
+	float: left;
+	width: 690px;
+	height: 30px;
+	margin: 5px auto 0px auto;
+	padding: 10px 10px 30px 0;
+	text-align: right;
+}
+
+#footer {
+	float: left;
+	width: 900px;
+	height: 80px;
+	margin: 0px;
+	padding: 0px;
+}
+
+ul {
+	list-style: none;
+}
+
+#book_list ul {
+	list-style: none;
+}
+
+#books {
+	margin: 0px;
+	padding: 0px;
+}
+
+.listitem {
+	float: left;
+	padding: 15px 0 5px 8px;
+	margin: 0px;
+	vertical-align: center;
+	border-bottom: 1px solid #c2c4c3;
+}
+
+.listitem_pic {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	vertical-align: center;
+	width: 160px;
+	text-align: center;
+	border: 1px solid #DDD;
+}
+
+.listitem_detail {
+	float: right;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 520px;
+}
+.price_label {
+	color: orange;
+}
+.originalprice_label {
+	color: #b8beba;
+	text-decoration: line-through;
+}
+.discount_label {
+	color: #2187d6;
+}
+.operate_panel {
+	padding-right: 20px;
+	text-align: right;
+}
+.tiplist {
+	margin: 0px;
+	padding-left: 15px;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}

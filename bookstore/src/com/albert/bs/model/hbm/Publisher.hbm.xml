@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >          
+<hibernate-mapping>
+	<class name="com.albert.bs.model.Publisher" catalog="bookstore" table="publisher">
+		<id name="publisherId" type="string" column="publisherid">
+			<generator class="uuid.hex"></generator>
+		</id>
+		<property name="publisher" column="publisher" type="string" unique="true"></property>
+	</class>
+</hibernate-mapping>

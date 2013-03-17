@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC 
+          "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+          "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="admin" namespace="/admin" extends="main">
+		<default-interceptor-ref name="adminStack"></default-interceptor-ref>
+		<global-results>
+	         <result name="login">/WEB-INF/admin/admin/login.jsp</result>
+		</global-results>
+		 
+		<action name="tologin" class="adminAction">
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<result>/WEB-INF/admin/admin/login.jsp</result>
+		</action> 
+		<action name="login" class="adminLoginAction">
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<result type="redirectAction">index.action</result>
+		</action> 
+		<action name="index" class="adminIndexAction">
+			<result>/WEB-INF/admin/book/index.jsp</result>
+		</action> 
+		<action name="logout" class="adminLogoutAction">
+			<result>/WEB-INF/admin/admin/login.jsp</result>
+		</action>
+		
+		<!-- 出版社管理 -->
+		<action name="publisherlist" class="publisherListAction">
+			<result>/WEB-INF/admin/book/publisher_list.jsp</result>
+		</action> 
+		<action name="haspublisher" class="hasPublisherAction"></action> 
+		<action name="addpublisher" class="addPublisherAction">
+			<result type="redirectAction">publisherlist.action</result>
+		</action> 
+		<action name="modifypublisher" class="modifyPublisherAction">
+			<result type="redirectAction">publisherlist.action</result>
+		</action> 
+		<action name="deletepublisher" class="deletePublisherAction"></action> 
+		
+		<!-- 图书管理 -->
+		<action name="toaddbook" class="toAddBookAction">
+			<result>/WEB-INF/admin/book/book_add.jsp</result>
+		</action> 
+		<action name="addbook" class="addBookAction">
+			<interceptor-ref name="fileUpload">
+				<param name="maximumSize">1024000</param>
+				<param name="allowedTypes">image/jpeg,image/jpg,image/gif,image/bmp,image/png,image/x-png</param>
+			</interceptor-ref>
+			<interceptor-ref name="adminStack"></interceptor-ref>
+			<result type="redirectAction">searchbook</result>
+			<result name="input" type="redirectAction">toaddbook.action</result>
+		</action> 
+		<action name="searchbook" class="searchBookAction">
+			<result>/WEB-INF/admin/book/book_list.jsp</result>
+			<result name="input" type="redirectAction">searchbook</result>
+		</action> 
+		<action name="setsafestock" class="setSafeStockAction">
+			<result type="redirectAction">lowstockbooklist</result>
+		</action> 
+		<action name="lowstockbooklist" class="lowStockBookListAction">
+			<result>/WEB-INF/admin/book/book_lowstock.jsp</result>
+		</action> 
+		<action name="bookinfo" class="bookInfoAction">
+			<result>/WEB-INF/admin/book/book_modify.jsp</result>
+		</action> 
+		<action name="modifystock" class="modifyStockAction">
+			<result type="redirectAction">lowstockbooklist.action</result>
+			<result name="searchbook" type="chain">searchbook</result>
+		</action> 
+		<action name="downshelf" class="downShelfAction">
+			<result type="redirectAction">lowstockbooklist.action</result>
+			<result name="searchbook">/WEB-INF/admin/book/book_list.jsp</result>
+		</action> 
+		<action name="modifyimage" class="modifyImageAction">
+			<interceptor-ref name="fileUpload">
+				<param name="maximumSize">1024000</param>
+				<param name="allowedTypes">image/jpeg,image/jpg,image/gif,image/bmp,image/png,image/x-png</param>
+			</interceptor-ref>
+			<interceptor-ref name="adminStack"></interceptor-ref>
+			<result type="chain">bookinfo</result>
+		</action> 
+		<action name="modifybook" class="modifyBookAction">
+			<result type="chain">bookinfo</result>
+		</action>
+		
+		<!-- 图书类别管理 -->
+		<action name="categorylist" class="adminCategoryListAction">
+			<result>/WEB-INF/admin/category/category_list.jsp</result>
+		</action>
+		<action name="hastopcategory" class="hasTopCategoryAction"></action> 
+		<action name="addtopcategory" class="addTopCategoryAction">
+			<result type="redirectAction">categorylist.action</result>
+		</action> 
+		<action name="addlowcategory" class="addLowCategoryAction">
+			<result type="redirectAction">categorylist.action</result>
+		</action> 
+		<action name="modifytopcategory" class="modifyTopCategoryAction">
+			<result type="redirectAction">categorylist.action</result>
+		</action> 
+		<action name="modifylowcategory" class="modifyLowCategoryAction">
+			<result type="redirectAction">categorylist.action</result>
+		</action> 
+		<action name="deletetopcategory" class="deleteTopCategoryAction"></action> 
+		<action name="deletelowcategory" class="deleteLowCategoryAction"></action> 
+
+		
+		<!-- 订单管理 -->
+		<action name="ordersnew" class="ordersNewAction">
+			<result>/WEB-INF/admin/order/order_new.jsp</result>
+		</action> 
+		<action name="queryorder" class="queryOrderAction">
+			<result>/WEB-INF/admin/order/order_query.jsp</result>
+		</action> 
+		<action name="deliveredorderslist" class="deliveredOrdersListAction">
+			<result>/WEB-INF/admin/order/order_delivered.jsp</result>
+		</action> 
+		<action name="orderslist" class="ordersListAction">
+			<result>/WEB-INF/admin/order/order_all.jsp</result>
+		</action> 
+		<action name="deliver" class="deliverAction">
+			<result type="redirectAction">ordersnew.action</result>
+		</action>
+		
+		<!-- 公告管理 -->
+		<action name="toaddbillboard" class="adminAction">
+			<result>/WEB-INF/admin/billboard/billboard_add.jsp</result>
+		</action> 
+		<action name="addbillboard" class="addBillboardAction">
+			<result type="redirectAction">currentbillboards.action</result>
+		</action> 
+		<action name="currentbillboards" class="currentBillboardsAction">
+			<result>/WEB-INF/admin/billboard/billboard_current.jsp</result>
+		</action> 
+		<action name="hidbillboard" class="hidBillboardAction">
+			<result type="redirectAction">currentbillboards.action</result>
+		</action> 
+		<action name="billboardlist" class="billboardListAction">
+			<result>/WEB-INF/admin/billboard/billboard_list.jsp</result>
+		</action> 
+		<action name="deletebillboard" class="deleteBillboardAction">
+			<result type="redirectAction">billboardlist.action</result>
+		</action> 
+		<action name="billboardinfo" class="billboardInfoAction">
+			<result>/WEB-INF/admin/billboard/billboard_info.jsp</result>
+		</action> 
+		
+		<!-- 用户管理 -->
+		<action name="searchuser" class="searchUserAction">
+			<result>/WEB-INF/admin/user/user_list.jsp</result>
+		</action> 
+		<action name="changeuserstatus" class="changeUserStatusAction">
+			<result type="redirectAction">searchuser</result>
+		</action> 
+		<action name="userinfo" class="userInfoAction">
+			<result>/WEB-INF/admin/user/user_modify.jsp</result>
+		</action> 
+		
+		<!-- 评论管理 -->
+		<action name="todaycomments" class="todayCommentsAction">
+			<result>/WEB-INF/admin/comment/comment_today.jsp</result>
+		</action> 
+		<action name="lowscorecomments" class="lowScoreCommentsAction">
+			<result>/WEB-INF/admin/comment/comment_lowscore.jsp</result>
+		</action> 
+		<action name="querycomments" class="queryCommentsAction">
+			<result>/WEB-INF/admin/comment/comment_all.jsp</result>
+		</action> 
+		
+		<!-- 管理员管理 -->
+		<action name="adminlist" class="adminListAction">
+			<result>/WEB-INF/admin/admin/admin_list.jsp</result>
+		</action>
+		<action name="toaddadmin" class="adminAction">
+			<result>/WEB-INF/admin/admin/admin_add.jsp</result>
+		</action>
+		<action name="addadmin" class="addAdminAction">
+			<result type="redirectAction">adminlist</result>
+		</action> 
+		<action name="deleteadmin" class="deleteAdminAction">
+			<result type="redirectAction">adminlist</result>
+		</action> 
+		<action name="resetpassword" class="resetPasswordAction">
+			<result>/WEB-INF/admin/admin/admin_newpsw.jsp</result>
+		</action>
+		<action name="tomodifypassword" class="adminAction">
+			<result>/WEB-INF/admin/admin/admin_modifypsw.jsp</result>
+		</action>
+		<action name="modifypsw" class="modifyPswAction">
+			<result type="redirectAction">index.action</result>
+			<result name="input">/WEB-INF/admin/admin/admin_modifypsw.jsp</result>
+		</action>
+		
+	</package>
+</struts>

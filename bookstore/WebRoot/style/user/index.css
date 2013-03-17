@@ -1,0 +1,190 @@
+@CHARSET "UTF-8";
+
+#page {
+	position: relative;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 900px;
+}
+
+#header {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 900px;
+}
+
+#content {
+	float: left;
+	margin: 0px auto 30px auto;
+	padding: 10px 0 0 0;
+	width: 900px;
+}
+
+#left {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 200px;
+	text-align: center;
+}
+
+#category_panel {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 200px;
+	text-align: left;
+}
+#billboard_panel {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 200px;
+	text-align: left;
+}
+#billboard_title {
+	float: left;
+	width: 195px;
+	margin: 0 auto 0 auto;
+	padding: 30px 0 5px 5px;
+	font-weight: bold;
+	font-size: 20px;
+	border-bottom: 2px solid #9ec0aa;
+}
+
+#billboard_list {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 5px 0 10px 0;
+	width: 200px;
+	list-style: none;
+}
+
+.billboard_item {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 5px 0 5px 0px;
+	width: 200px;
+	border-bottom: 1px dashed #8cdba0;
+}
+#right {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 698px;
+}
+
+#newbook {
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	width: 698px;
+}
+.part_title {
+	float: left;
+	margin: 0px auto 0 10px;
+	padding: 22px 0 10px 0px;
+	width: 688px;
+	list-style: none;
+	border-bottom: 1px solid #63d68a;
+}
+.part_left {
+	float: left;
+	margin: 0px;
+	padding: 0 0 0 10px;
+	width: 618px;
+	font-weight: bold;
+	font-size: 18px;
+	color: orange;
+	display: block;
+}
+.part_right {
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	width: 60px;
+	font-size: 14px;
+	display: block;
+}
+.book_list {
+	float: left;
+	margin: 0px;
+	padding: 0 0 5px 15px;
+	width: 683px;
+	list-style: none;
+}
+.book_item {
+	float: left;
+	margin: 0px;
+	padding: 15px 20px 20px 20px;
+	width: 130px;
+	height: 190px;
+	display: inline;
+}
+.book_info {
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	width: 130px;
+	list-style: none;
+}
+.book_info li {
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	width: 130px;
+	display: block;
+}
+
+#goodbook {
+	float: left;
+	width: 698px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#booombook {
+	float: left;
+	width: 698px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#arrangebook {
+	float: left;
+	width: 698px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.price_label {
+	color: orange;
+	padding-left: 3px;
+}
+.originalprice_label {
+	color: #b8beba;
+	text-decoration: line-through;
+	padding-left: 5px;
+}
+
+#footer {
+	float: left;
+	width: 900px;
+	margin: 0px;
+	padding: 0px;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	color: #72a8c9;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #3a83af;
+	text-decoration: underline;
+}

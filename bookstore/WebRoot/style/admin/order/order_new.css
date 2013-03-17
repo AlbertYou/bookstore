@@ -1,0 +1,215 @@
+@CHARSET "UTF-8";
+#page {
+	position:relative;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:900px;
+}
+#header {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:900px;
+}
+#content {
+	float:center;
+	margin: 0px auto 0px auto;
+	padding:0px;
+	width:900px;
+}
+#left {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:200px;
+}
+#right {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:700px;
+}
+#footer {
+	float:left;
+	width:900px;
+	margin:0px;
+	padding:0px;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+#left_nav {
+	float:left;
+	margin: 30px auto 100px auto;
+	padding: 20px 0 0 20px;
+	width:180px;
+	list-style: none;
+}
+#left_nav li {
+	float:left;
+	margin:0px 20px 0px auto;
+	padding: 5px 0 0 10px;
+	width: 140px;
+	display: block;
+	font-weight: bold;
+	font-size: 19px;
+	border-bottom: 1px solid #c5effe;
+}
+#left_nav li a {
+	color: #597ffc;
+}
+#current_left_nav a {
+	color: red;
+}
+#order_panel {
+	float:left;
+	margin: 40px auto 0px auto;
+	padding:4px 0px 0 7px;
+	width:680px;
+}
+#temp_nav {
+	float:left;
+	margin:0px auto 20px auto;
+	padding:10px 0 3px 10px;
+	width:680px;
+	background-color:#dae0f7;
+}
+#order_total {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	height:25px;
+	color: orange;
+	font-weight: bold;
+	font-size: 20px;
+	background-color: #dfd9fa;
+}
+#order_sort {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 5px 0 0 20px;
+	height: 20px;
+	font-size: 15px;
+	color: gray;
+	background-color: #dfd9fa;
+}
+#order_list {
+	float:left;
+	margin:0px auto 0px 5px;
+	padding:0px;
+	width:680px;
+	list-style: none;
+	border: 1px solid #5e7ffa;
+}
+.order_detail {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:680px;
+	display: block;
+}
+.order_title {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:10px 0 5px 5px;
+	width:675px;
+	list-style: none;
+	background-color:#eff0f4;
+}
+.ordernumber_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:180px;
+	display: inline;
+}
+.ordercreatetime_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:150px;
+	display: inline;
+}
+.ordercount_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:200px;
+	display: inline;
+	text-align: right;
+}
+.ordertotalprice_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:120px;
+	font-weight:bold;
+	text-align: right;
+	display: inline;
+}
+.user_info {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px 0 5px 5px;
+	width:675px;
+	list-style: none;
+}
+.user_info li {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:10px 0 0 ;
+	width:225px;
+	display: inline;
+}
+.book_list {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:7px 0 10px 0;
+	width:680px;
+	list-style: none;
+}
+.book_list li {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:680px;
+	display: block;
+}
+.book_detail {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:680px;
+	list-style: none;
+	border-bottom: 1px solid #dee2f2;
+}
+.book_detail li {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:5px 0 5px 10px;
+	width: 120px;
+	display: inline;
+}
+.order_delivery {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px 20px 15px 0;
+	width:660px;
+	text-align: right;
+	border-bottom: 2px solid #c1cdfb;
+}
+#total_price_label {
+	padding: 0 20px 0 5px;
+	color: orange;
+}
+#paginating {
+	float: left;
+	margin: 0px auto 30px auto;
+	padding: 10px 10px 0px 0;
+	text-align: right;
+	width: 688px;
+	height: 40px;
+}

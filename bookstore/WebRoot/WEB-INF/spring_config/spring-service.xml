@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+       
+       <bean id="adminService" class="com.albert.bs.serviceimpl.AdminServiceImpl">
+       		<property name="dao" ref="adminDao"></property>
+       </bean>
+       <bean id="bookService" class="com.albert.bs.serviceimpl.BookServiceImpl">
+       		<property name="dao" ref="bookDao"></property>
+       </bean>
+       <bean id="publisherService" class="com.albert.bs.serviceimpl.PublisherServiceImpl">
+       		<property name="dao" ref="publisherDao"></property>
+       </bean>
+       <bean id="lowCategoryService" class="com.albert.bs.serviceimpl.LowCategoryServiceImpl">
+       		<property name="dao" ref="lowCategoryDao"></property>
+       </bean>
+       <bean id="topCategoryService" class="com.albert.bs.serviceimpl.TopCategoryServiceImpl">
+       		<property name="dao" ref="topCategoryDao"></property>
+       </bean>
+       <bean id="billboardService" class="com.albert.bs.serviceimpl.BillboardServiceImpl">
+       		<property name="dao" ref="billboardDao"></property>
+       </bean>
+       <bean id="orderService" class="com.albert.bs.serviceimpl.OrderServiceImpl">
+       		<property name="dao" ref="orderDao"></property>
+       </bean>
+       <bean id="orderItemService" class="com.albert.bs.serviceimpl.OrderItemServiceImpl">
+       		<property name="dao" ref="orderItemDao"></property>
+       </bean>
+       <bean id="userService" class="com.albert.bs.serviceimpl.UserServiceImpl">
+       		<property name="dao" ref="userDao"></property>
+       </bean>
+       <bean id="commentService" class="com.albert.bs.serviceimpl.CommentServiceImpl">
+       		<property name="dao" ref="commentDao"></property>
+       </bean>
+       <bean id="collectService" class="com.albert.bs.serviceimpl.CollectServiceImpl">
+       		<property name="dao" ref="collectDao"></property>
+       </bean>
+       <bean id="productService" class="com.albert.bs.serviceimpl.ProductServiceImpl">
+       		<property name="dao" ref="productDao"></property>
+       </bean>
+       <bean id="recipientService" class="com.albert.bs.serviceimpl.RecipientServiceImpl">
+       		<property name="dao" ref="recipientDao"></property>
+       </bean>
+       
+</beans>

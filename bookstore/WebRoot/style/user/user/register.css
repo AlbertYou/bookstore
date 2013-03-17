@@ -1,0 +1,89 @@
+@CHARSET "UTF-8"; 
+
+html,body {
+	margin: 0px;
+	padding: 0px;
+	font-family: "仿宋";
+}
+
+#page {
+	position: relative;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 900px;
+}
+
+#logo {
+	position: absolute;
+	width: 220px;
+	height: 187px;
+	z-index: 1;
+	margin: 0px;
+	padding: 0px;
+	left: 0px;
+	top: 0px;
+}
+
+#register {
+	position:absolute;
+	width:500px;
+	height:330px;
+	left:200px;
+	top:130px;
+	margin: 0px;
+	padding: 0;
+}
+.b1,.b2,.b3,.b4,.b5,.b6,.b7,.b8{height:1px; font-size:1px; overflow:hidden; display:block;}
+.b1,.b8{margin:0 5px;}
+.b2,.b7{margin:0 3px;border-right:2px solid; border-left:2px solid;}
+.b3,.b6{margin:0 2px;border-right:1px solid; border-left:1px solid;}
+.b4,.b5{margin:0 1px;border-right:1px solid; border-left:1px solid; height:2px;}
+.content {border-right:1px solid;border-left:1px solid;overflow:hidden;}
+#register .b2,#register .b3,#register .b4,#register .b5,#register .b6,#register .b7,#register .content{border-color:#96C2F1;}
+#register .b1,#register .b8{background:#96C2F1;}
+#register .b2,#register .b3,#register .b4,#register .b5,#register .b6,#register .b7,#register .content{background:#EFF7FF;}
+
+#title {
+	float:left;
+	margin:0px;
+	padding: 10px 0 10px 30px;
+	width:450px;
+	font-size: 25px;
+	color: #2b5d38;
+	font-weight: bold;
+}
+.register_item {
+	float:left;
+	margin:0px;
+	padding:0 0 10px 50px;
+	width:450px;
+	font-size: 20px;
+	font-weight: bold;
+}
+.submit_label {
+	float:left;
+	margin:0px;
+	padding:10px 0 20px 170px;
+	width:330px;
+}
+#username, #email, #password, #repeatPassword, #phone{
+	height: 22px;
+	font-size: 20px;
+}
+.required_label {
+	color: red;
+}
+/*错误信息样式 jQuery-validation*/
+label.error, #username_error, #email_error {
+	float:left;
+	margin:0px;
+	padding: 10px 0 0px 110px;
+	width:420px;
+	color: red;
+	font-size: 14px;
+}
+.error_label {
+	width:420px;
+	color: red;
+	font-size: 14px;
+}

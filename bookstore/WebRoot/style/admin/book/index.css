@@ -1,0 +1,104 @@
+@CHARSET "UTF-8";
+#page {
+	position:relative;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:900px;
+}
+#header {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:900px;
+}
+#content {
+	float:center;
+	margin: 0px auto 0px auto;
+	padding:0px;
+	width:900px;
+}
+#left {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:200px;
+}
+#right {
+	float:right;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:700px;
+}
+#footer {
+	float:left;
+	width:900px;
+	margin:0px;
+	padding:0px;
+}
+#left_nav {
+	float:left;
+	margin: 30px auto 0px auto;
+	padding: 20px 0 0 20px;
+	width:180px;
+	list-style: none;
+}
+#left_nav li {
+	float:left;
+	margin:0px 20px 0px auto;
+	padding: 5px 0 0 10px;
+	width: 140px;
+	display: block;
+	font-weight: bold;
+	font-size: 19px;
+	border-bottom: 1px solid #c5effe;
+}
+#left_nav li a {
+	color: #597ffc;
+}
+#welcome_panel {
+	float:left;
+	margin: 40px auto 0px auto;
+	padding: 20px 0 60px 0;
+	width:700px;
+	text-align: center;
+	font-weight: bold;
+	color: #156;
+	font-size: 27px;
+	border-left: 2px solid #e0ebef;
+}
+#total_sell {
+	float:left;
+	margin:0px auto 0px auto;
+	padding: 0px 0 20px 0;
+	width:700px;
+	font-size: 22px;
+	text-align: center;
+	border-left: 2px solid #e0ebef;
+}
+#sell_label {
+	padding: 0 7px;
+	color: red;
+}
+#notice_panel {
+	float:left;
+	margin:0px auto 70px auto;
+	padding: 20px 0 40px 0;
+	width:700px;
+	font-size: 20px;
+	text-align: center;
+	border-left: 2px solid #e0ebef;
+}
+#notice_panel ul {
+	float:left;
+	margin:0px auto 0px auto;
+	padding: 0px 200px 0px 200px;
+	width:300px;
+	list-style: none;
+}
+#notice_panel ul li {
+	float:left;
+	margin:0px auto 0px auto;
+	padding: 0px;
+	width:150px;
+	display: block;
+}

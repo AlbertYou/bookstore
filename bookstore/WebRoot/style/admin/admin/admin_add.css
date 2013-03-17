@@ -1,0 +1,74 @@
+@CHARSET "UTF-8";
+#page {
+	position:relative;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:900px;
+}
+#header {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:900px;
+}
+#content {
+	float:left;
+	margin: 0px auto 30px auto;
+	padding:0px;
+	height:500px;
+}
+#footer {
+	float:left;
+	width:900px;
+	margin:0px;
+	padding:0px;
+}
+#admin_add_panel {
+	position: absolute;
+	margin: 30px auto 0px auto;
+	padding:0px;
+	width:300px;
+	left: 300px;
+	top: 220px;
+	border: 1px solid #a4eaca;
+}
+#temp_nav {
+	float:left;
+	margin:0px auto 0px auto;
+	padding: 10px 0 5px 10px;
+	width:290px;
+	font-weight: bold;
+	font-size: 18px;
+	background-color:#d5ebd5;
+}
+#form_add {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:10px 0 0 0;
+	width:300px;
+	list-style: none;
+}
+#name_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:10px 0 0 30px;
+	width:270px;
+	display: block;
+}
+#psw_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:10px 0 0 30px;
+	width:270px;;
+	display: block;
+}
+#submit_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:15px 0 20px 110px;
+	width:190px;
+	display: block;
+}
+#add_label {
+	height: 30px;
+}

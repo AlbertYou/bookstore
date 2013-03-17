@@ -1,0 +1,186 @@
+@CHARSET "UTF-8";
+#page {
+	position: relative;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 900px;
+}
+#header {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 900px;
+}
+#content {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 20px 0 20px 0;
+	width: 900px;
+}
+#left {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 200px;
+}
+#right {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 700px;
+}
+#footer {
+	float:left;
+	width:900px;
+	height:100px;
+	margin:0px;
+	padding:0px;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+#nav_panel {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	padding-top:10px;
+	width: 200px;
+}
+.current_nav {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 7px 0 5px 20px;
+	width: 180px;
+	border-bottom: 1px solid #5390cf;
+	background-color: #aacbf3;
+}
+.nav_item1 {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 7px 0 5px 20px;
+	width: 180px;
+	border-bottom: 1px solid #5390cf;
+	background-color: #cee4fa;
+}
+.nav_item2 {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 7px 0 5px 40px;
+	width: 160px;
+	border-bottom: 1px solid #c9daeb;
+	background-color: #ebf4fd;
+}
+.nav_item1, .nav_item1 a, .nav_item2 a{
+	color: #6392fb;
+}
+.current_nav a{
+	color: #058cf4;
+	font-weight: bold;
+}
+#user_info {
+	float: left;
+	margin: 10px auto 25px 50px;
+	padding: 0px;
+	width: 570px;
+	height:150px;
+	border-left: 1px solid #23a692;
+	border-top: 1px solid #23a692;
+	border-bottom: 2px solid #0a7e6c;
+	border-right: 2px solid #0a7e6c;
+}
+#username {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 20px 0 20px 30px;
+	width: 570px;
+}
+#name {
+	font-size: 25px;
+	color: #1a5397;
+	font-weight: bold;
+}
+#username a {
+	font-size: 15px;
+}
+#modifyinfo {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding-top: 5px;
+	padding-left:40px;
+	width: 110px;
+}
+#other {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding-top: 35px;
+	width: 350px;
+}
+#other ul {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	list-style: none;
+	width: 300px;
+}
+#other ul li {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0 0 0 20px;
+	display: inline;
+	width: 130px;
+}
+#other a  {
+	font-size: 20px;
+	color: #ec0e62;
+}
+#temp_nav {
+	float: left;
+	margin: 0px auto 0px 20px;
+	padding: 10px 0px 5px 20px;
+	width: 660px;
+	color: orange;
+	font-weight: bold;
+	font-size: 18px;
+	background-color: #eceefb;
+}
+#emphasisbooks {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 700px;
+}
+#booklist {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 5px 30px 10px 30px;
+	width: 640px;
+	list-style: none;
+	display: block;
+}
+.book_item {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	padding-left: 20px;
+	width: 140px;
+	height: 200px;
+	display: block;
+}
+.book_image {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 10px 20px 3px 0px;
+	width: 90px;
+	height: 150px;
+	display: block;
+}
+.book_name {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 120px;
+	display: block;
+}

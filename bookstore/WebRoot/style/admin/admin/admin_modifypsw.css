@@ -1,0 +1,91 @@
+@CHARSET "UTF-8";
+#page {
+	position:relative;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:900px;
+}
+#header {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:900px;
+}
+#content {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	height: 350px;
+	width:900px;
+}
+#footer {
+	float:left;
+	width:900px;
+	height:80px;
+	margin:0px;
+	padding:0px;
+}
+#admin_modifypsw_panel {
+	position: absolute;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:300px;
+	left: 300px;
+	top: 220px;	
+	background-color:#f3e9ed;
+}
+#temp_nav {
+	float:left;
+	margin:0px auto 0px auto;
+	padding: 10px 0 5px 10px;
+	width:290px;
+	font-weight: bold;
+	font-size: 20px;
+	background-color:#dedbdc;
+}
+#result_panel {
+	float:left;
+	margin:0px auto 0px auto;
+	padding: 10px 0 10px 10px;
+	width:290px;
+	font-weight: bold;
+	background-color:#f3e9ed;
+}
+#form_modifypsw {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:10px 0 0 0;
+	width:300px;
+	list-style: none;
+}
+#psw_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:10px 0 0 30px;
+	width:270px;
+	display: block;
+}
+#newpsw_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:10px 0 0 30px;
+	width:270px;;
+	display: block;
+}
+#repeatpsw_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:10px 0 0 30px;
+	width:270px;;
+	display: block;
+}
+#submit_label {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:15px 0 20px 110px;
+	width:190px;
+	display: block;
+}
+#modify_button {
+	height: 30px;
+}

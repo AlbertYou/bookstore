@@ -1,0 +1,80 @@
+@CHARSET "UTF-8";
+html, body {
+	margin: 0px;
+	padding: 0px;
+	font-family: "仿宋";
+}
+#page {
+	position: relative;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 900px;
+}
+#logo {
+	position:absolute;
+	z-index:1;
+	margin:0px;
+	padding:0px;
+	left: 0px;
+	top: 0px;
+}
+
+#nav {
+	position:absolute;
+	width:500px;
+	left:200px;
+	top: 160px;
+	margin: 0px;
+	padding: 0 0 10px 0;
+	font-size: 35px;
+	font-weight: bolder;
+	color: #086e27;
+	text-align: center;
+}
+#login {
+	position:absolute;
+	width: 850px;
+	left: 25px;
+	top: 310px;
+	margin: 0px;
+	padding: 0;
+}
+.b1,.b2,.b3,.b4,.b5,.b6,.b7,.b8{height:1px; font-size:1px; overflow:hidden; display:block;}
+.b1,.b8{margin:0 5px;}
+.b2,.b7{margin:0 3px;border-right:2px solid; border-left:2px solid;}
+.b3,.b6{margin:0 2px;border-right:1px solid; border-left:1px solid;}
+.b4,.b5{margin:0 1px;border-right:1px solid; border-left:1px solid; height:2px;}
+.content {border-right:1px solid;border-left:1px solid;overflow:hidden;}
+#login .b2,#login .b3,#login .b4,#login .b5,#login .b6,#login .b7,#login .content{border-color:#e5f7ea;}
+#login .b1,#login .b8{background:#e5f7ea;}
+#login .b2,#login .b3,#login .b4,#login .b5,#login .b6,#login .b7,#login .content{background:#e5f7ea;}
+
+#namelabel {
+	float:left;
+	margin: 0px;
+	padding: 35px 0 15px 20px;
+	font-size: 20px;
+	font-weight: bold;
+}
+#passwordlabel {
+	float:left;
+	margin: 0px;
+	padding: 35px 0 15px 30px;
+	font-size: 20px;
+	font-weight: bold;
+}
+#loginlabel {
+	float:left;
+	margin:0px;
+	padding: 25px 0 30px 70px;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+#adminName, #password {
+	height: 23px;
+	font-size: 17px;
+}

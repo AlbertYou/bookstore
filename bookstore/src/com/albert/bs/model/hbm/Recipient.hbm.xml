@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >          
+<hibernate-mapping>
+	<class name="com.albert.bs.model.Recipient" catalog="bookstore" table="recipient" dynamic-insert="true" dynamic-update="true">
+		<id name="recipientId" type="string" column="recipientid" unsaved-value="null">
+			<generator class="uuid.hex"></generator>
+		</id>
+		<many-to-one name="user" column="userid"></many-to-one>
+		<property name="recipient" column="recipient" type="string"></property>
+		<property name="phone" column="phone" type="string"></property>
+		<property name="address" column="address" type="string"></property>
+		<property name="zipcode" column="zipcode" type="string"></property>
+		<property name="defaultAddr" column="defaultaddr" type="integer"></property>
+		<property name="status" column="status" type="integer"></property>
+	</class>
+</hibernate-mapping>

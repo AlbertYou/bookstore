@@ -1,0 +1,44 @@
+@CHARSET "UTF-8";
+#page {
+	position:relative;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:900px;
+}
+#header {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:900px;
+}
+#content {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:0px;
+	width:900px;
+}
+#footer {
+	float:left;
+	width:900px;
+	margin:0px;
+	padding:0px;
+}
+#psw_panel {
+	float:left;
+	margin:0px auto 0px auto;
+	padding:130px 0 200px 0px;
+	width:900px;
+	font-weight: bold;
+	font-size: 19px;
+	text-align: center;
+}
+#admin_name_label {
+	font-weight: bolder;
+	font-size: 22px;
+	color: orange;
+}
+#admin_password_label {
+	font-weight: bolder;
+	font-size: 30px;
+	color: red;
+}

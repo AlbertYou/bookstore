@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >          
+<hibernate-mapping>
+	<class name="com.albert.bs.model.User" catalog="bookstore" table="user" dynamic-insert="true" dynamic-update="true">
+		<id name="userId" type="string" column="userid">
+			<generator class="uuid.hex"></generator>
+		</id>
+		<property name="username" column="username" type="string" unique="true"></property>
+		<property name="email" column="email" type="string"></property>
+		<property name="password" column="password" type="string"></property>
+		<property name="sex" column="sex" type="integer"></property>
+		<property name="phone" column="phone" type="string"></property>
+		<property name="status" column="status" type="integer"></property>
+		<set name="recipients" lazy="true">
+			<key column="userid"></key>
+			<one-to-many class="com.albert.bs.model.Recipient"/>
+		</set>
+		<set name="collects" lazy="true">
+			<key column="userid"></key>
+			<one-to-many class="com.albert.bs.model.Collect"/>
+		</set>
+		<set name="comments" lazy="true">
+			<key column="userid"></key>
+			<one-to-many class="com.albert.bs.model.Comment"/>
+		</set>
+		<set name="orders" lazy="true">
+			<key column="userid"></key>
+			<one-to-many class="com.albert.bs.model.Order"/>
+		</set>
+	</class>
+</hibernate-mapping>

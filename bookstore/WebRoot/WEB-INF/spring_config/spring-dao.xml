@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+       
+       <bean id="baseDao" class="com.albert.bs.daoimpl.BaseDaoImpl" abstract="true">
+             <property name="sessionFactory" ref="sessionFactory"></property>
+       </bean>
+       
+       <bean id="adminDao" class="com.albert.bs.daoimpl.AdminDaoImpl" parent="baseDao"></bean>
+       <bean id="bookDao" class="com.albert.bs.daoimpl.BookDaoImpl" parent="baseDao"></bean>
+       <bean id="publisherDao" class="com.albert.bs.daoimpl.PublisherDaoImpl" parent="baseDao"></bean>
+       <bean id="lowCategoryDao" class="com.albert.bs.daoimpl.LowCategoryDaoImpl" parent="baseDao"></bean>
+       <bean id="topCategoryDao" class="com.albert.bs.daoimpl.TopCategoryDaoImpl" parent="baseDao"></bean>
+       <bean id="billboardDao" class="com.albert.bs.daoimpl.BillboardDaoImpl" parent="baseDao"></bean>
+       <bean id="orderDao" class="com.albert.bs.daoimpl.OrderDaoImpl" parent="baseDao"></bean>
+       <bean id="orderItemDao" class="com.albert.bs.daoimpl.OrderItemDaoImpl" parent="baseDao"></bean>
+       <bean id="userDao" class="com.albert.bs.daoimpl.UserDaoImpl" parent="baseDao"></bean>
+       <bean id="collectDao" class="com.albert.bs.daoimpl.CollectDaoImpl" parent="baseDao"></bean>
+       <bean id="commentDao" class="com.albert.bs.daoimpl.CommentDaoImpl" parent="baseDao"></bean>
+       <bean id="productDao" class="com.albert.bs.daoimpl.ProductDaoImpl" parent="baseDao"></bean>
+       <bean id="recipientDao" class="com.albert.bs.daoimpl.RecipientDaoImpl" parent="baseDao"></bean>
+       
+       
+</beans>

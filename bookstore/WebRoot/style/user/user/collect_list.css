@@ -1,0 +1,193 @@
+@CHARSET "UTF-8";
+#page {
+	position: relative;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 900px;
+}
+#header {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 900px;
+}
+#content {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 20px 0 20px 0;
+	width: 900px;
+}
+#left {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 200px;
+}
+#right {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 700px;
+}
+#footer {
+	float:left;
+	width:900px;
+	margin:0px;
+	padding:0px;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+#nav_panel {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	padding-top:10px;
+	width: 200px;
+}
+.current_nav {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 7px 0 5px 20px;
+	width: 180px;
+	border-bottom: 1px solid #5390cf;
+	background-color: #aacbf3;
+}
+.nav_item1 {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 7px 0 5px 20px;
+	width: 180px;
+	border-bottom: 1px solid #5390cf;
+	background-color: #cee4fa;
+}
+.nav_item2 {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 7px 0 5px 40px;
+	width: 160px;
+	border-bottom: 1px solid #c9daeb;
+	background-color: #ebf4fd;
+}
+.nav_item1, .nav_item1 a, .nav_item2 a{
+	color: #6392fb;
+}
+.current_nav a{
+	color: #058cf4;
+	font-weight: bold;
+}
+#temp_nav {
+	float: left;
+	margin: 10px auto 0px auto;
+	padding: 10px 0 0 10px;
+	width: 690px;
+	height: 30px;
+	color: #753aee;
+	font-weight: bold;
+	font-size: 18px;
+	background-color: #e69ff8;
+}
+.clearall {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 7px 0 0 10px;
+	width: 690px;
+	height: 22px;
+	border-bottom: 2px solid #bebfc0;;
+	background-color: #f8f0fa;
+}
+#collect_list {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 7px 0 0 10px;
+	width: 690px;
+}
+.book_list {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	width: 690px;
+	list-style: none;
+	display:inline;
+	border-bottom: 1px solid #dfe1e2;;
+}
+.book_list li {
+	float: left;
+	margin: 0px;
+	padding: 9px 0 5px 0;
+	display:inline;
+	height: 90px;
+}
+.row1 {
+	width: 90px;
+	text-align: center;
+}
+.row2 {
+	width: 370px;
+}
+.row3 {
+	width: 120px;
+	text-align: center;
+}
+.row4 {
+	width: 110px;
+	text-align: center;
+}
+.bookname {
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	width: 370px;
+	height: 40px;
+	text-align: left;
+}
+.collect_about {
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	width: 370px;
+	height: 20px;
+}
+.collect_about ul {
+	margin: 0px;
+	padding: 0px;
+}
+.collect_about ul li {
+	margin: 0px;
+	padding: 0 15px 0 0;
+}
+#nullnotice {
+	width: 650px;
+	height: 100px;
+	padding-top: 40px;
+	text-align: center;
+	font-size: 20px;
+}
+.title_label {
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	width: 370px;
+	height: 20px;
+}
+.price_label {
+	color: orange;
+}
+.discount_label {
+	color: #2187d6;
+	padding-left: 10px;
+}
+#paginating {
+	float: left;
+	margin: 0px auto 0px auto;
+	padding: 7px 0 0 0px;
+	text-align: right;
+	width: 690px;
+	height: 40px;
+}
+.title_operate {
+	font-size: 13px;
+}
